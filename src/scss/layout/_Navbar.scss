@@ -1,0 +1,23 @@
+$Navbar-background-color: white !default;
+$Navbar-height: 3.25rem !default;
+
+.Navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-height: $Navbar-height;
+
+  display: flex;
+  align-items: stretch;
+
+  background-color: $Navbar-background-color;
+
+  // container inside Navbar
+  & > .container{
+    display: flex;
+    width: 100%;
+  }
+}
+
+

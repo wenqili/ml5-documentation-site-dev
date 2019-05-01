@@ -1,24 +1,24 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { kebabCase } from 'lodash'
-import Helmet from 'react-helmet'
-import { graphql, Link } from 'gatsby'
-import Layout from '../components/Layout'
-import Content, { HTMLContent } from '../components/Content'
+import React from "react";
+import PropTypes from "prop-types";
+import { kebabCase } from "lodash";
+import Helmet from "react-helmet";
+import { graphql, Link } from "gatsby";
+import Layout from "../components/Layout";
+import Content, { HTMLContent } from "../components/Content";
 
-export const BlogPostTemplate = ({
+export const ExperimentPostTemplate = ({
   content,
   contentComponent,
   description,
   tags,
   title,
-  helmet,
+  helmet
 }) => {
-  const PostContent = contentComponent || Content
+  const PostContent = contentComponent || Content;
 
   return (
     <section className="section">
-      {helmet || ''}
+      {helmet || ""}
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
@@ -43,23 +43,23 @@ export const BlogPostTemplate = ({
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-BlogPostTemplate.propTypes = {
+ExperimentPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   description: PropTypes.string,
   title: PropTypes.string,
-  helmet: PropTypes.object,
-}
+  helmet: PropTypes.object
+};
 
-const BlogPost = ({ data }) => {
-  const { markdownRemark: post } = data
+const ExperimentPost = ({ data }) => {
+  const { markdownRemark: post } = data;
 
   return (
     <Layout>
-      <BlogPostTemplate
+      <ExperimentPostTemplate
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
@@ -76,19 +76,19 @@ const BlogPost = ({ data }) => {
         title={post.frontmatter.title}
       />
     </Layout>
-  )
-}
+  );
+};
 
-BlogPost.propTypes = {
+ExperimentPost.propTypes = {
   data: PropTypes.shape({
-    markdownRemark: PropTypes.object,
-  }),
-}
+    markdownRemark: PropTypes.object
+  })
+};
 
-export default BlogPost
+export default ExperimentPost;
 
 export const pageQuery = graphql`
-  query BlogPostByID($id: String!) {
+  query ExperimentPostByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
       html
@@ -100,4 +100,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

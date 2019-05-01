@@ -1,0 +1,41 @@
+// Color
+
+$primary-color: purple;
+$secondary-color: white;
+$primary-font-color: #333;
+$secondary-font-color: #333;
+
+// Typography
+/// Brand font
+$primary-font-family: "Helvetica", "Arial", sans-serif !default;
+$secondary-font-family: "Helvetica", "Arial", sans-serif !default;
+$monospace-font-family: monospace !default;
+
+$font-size-1: 3rem;
+$font-size-2: 20px;
+$font-size-3: 13px;
+$font-size-4: 3rem;
+$font-size-5: 3rem;
+$font-size-6: 3rem;
+
+$weight-light: 300 !default;
+$weight-nromal: 400 !default;
+$weight-bold: 700 !default;
+
+// Resonpsiveness
+/// gap is acting as the horizontal gap of container
+$gap: 64px !default;
+/// fullhd >= 1472px;
+$fullhd: 1344px + (2 * $gap) !default;
+
+/// widescreen >= 1280px;
+$widescreen: 1152px + (2 * $gap) !default;
+
+/// desktop >= 1088px
+$desktop: 960px + (2 * $gap) !default;
+
+/// tablet >= 769px;
+$tablet: 769px !default;
+
+/// mobile
+$mobile: $tablet - 1px !default;

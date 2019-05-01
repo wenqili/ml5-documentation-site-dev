@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-netlify-cms",
-  "description": "Example Gatsby, and Netlify CMS project",
-  "version": "1.1.3",
-  "author": "Austin Green",
+  "name": "ml5-documentation-site-dev",
+  "description": "Gatsby, Netlify CMS project",
+  "version": "0.1.1",
+  "author": "Wenqi Li",
   "dependencies": {
     "bulma": "^0.7.0",
     "gatsby": "^2.1.34",
@@ -31,7 +31,7 @@
     "uuid": "^3.2.1"
   },
   "keywords": [
-    "gatsby"
+    "gatsby","netlify CMS","ml5.js", "ITP"
   ],
   "license": "MIT",
   "main": "n/a",
