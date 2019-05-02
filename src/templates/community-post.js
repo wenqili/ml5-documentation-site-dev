@@ -6,7 +6,7 @@ import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 
-export const ExperimentPostTemplate = ({
+export const CommunityPostTemplate = ({
   content,
   contentComponent,
   description,
@@ -46,7 +46,7 @@ export const ExperimentPostTemplate = ({
   );
 };
 
-ExperimentPostTemplate.propTypes = {
+CommunityPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   description: PropTypes.string,
@@ -54,12 +54,12 @@ ExperimentPostTemplate.propTypes = {
   helmet: PropTypes.object
 };
 
-const ExperimentPost = ({ data }) => {
+const CommunityPost = ({ data }) => {
   const { markdownRemark: post } = data;
 
   return (
     <Layout>
-      <ExperimentPostTemplate
+      <CommunityPostTemplate
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
@@ -79,16 +79,16 @@ const ExperimentPost = ({ data }) => {
   );
 };
 
-ExperimentPost.propTypes = {
+CommunityPost.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object
   })
 };
 
-export default ExperimentPost;
+export default CommunityPost;
 
 export const pageQuery = graphql`
-  query ExperimentPostByID($id: String!) {
+  query CommunityPostByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
       html
