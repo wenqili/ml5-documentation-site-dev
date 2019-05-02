@@ -16,7 +16,7 @@ ml5.js is heavily inspired by [Processing](https://processing.org/) and [p5.js](
 
 Reference the [latest version](https://unpkg.com/ml5@0.1.3/dist/ml5.min.js) of ml5.js using a script tag in an HTML file as below:
 
-```html
+```markup
 <!DOCTYPE html>
 <html>
   <head>
@@ -26,7 +26,7 @@ Reference the [latest version](https://unpkg.com/ml5@0.1.3/dist/ml5.min.js) of m
 
   <body>
     <script>
-      // Your code will go here
+      <!-- Your code will go here -->
     </script>
   </body>
 </html>
@@ -38,7 +38,7 @@ That's all! 💥
 
 Let's add something more to classify an image using the pre-trained MobileNet model.
 
-```html
+```markup
 <!DOCTYPE html>
 <html>
   <head>
