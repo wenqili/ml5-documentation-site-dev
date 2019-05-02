@@ -1,3 +1,10 @@
 .Sidebar {
   width: 248px;
 }
+
+.Sidebar__title{
+  font-size: $font-size-4;
+  color: $secondary-color;
+  font-weight: $weight-medium;
+  line-height: 38px;
+}

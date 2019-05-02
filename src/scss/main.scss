@@ -2,11 +2,11 @@
 
 @import "./vendors/normalize.css";
 
-@import "./base/typography";
+@import "./base/base","./base/font","./base/typography";
 
-@import "./layout/Navbar", "./layout/Sidebar", "./layout/wrapper", "./layout/flexContainer";
+@import "./layout/Navbar", "./layout/Sidebar", "./layout/wrapper", "./layout/flexContainer", './layout/Section', "./layout/Footer";
 
-@import "./components/ModelList";
+@import "./components/ModelList", "./components/TagList";
 
 // @import './pages/'
 

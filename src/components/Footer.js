@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 
-import logo from "../img/ml5_logo_purple.png";
+import logo from "../img/itp_logo.png";
 import facebook from "../img/social/facebook.svg";
 import instagram from "../img/social/instagram.svg";
 import twitter from "../img/social/twitter.svg";
@@ -10,109 +10,117 @@ import vimeo from "../img/social/vimeo.svg";
 const Footer = class extends React.Component {
   render() {
     return (
-      <footer className="footer has-background-black has-text-white-ter">
-        <div className="content has-text-centered">
-          <img src={logo} alt="ml5.js logo" style={{ width: "14em" }} />
+      <footer className="Footer">
+        <div className="Footer__logo">
+          <img src={logo} alt="itp logo" />
         </div>
-        <div className="content has-text-centered has-background-black has-text-white-ter">
-          <div className="container has-background-black has-text-white-ter">
-            <div className="columns">
-              <div className="column is-4">
-                <section className="menu">
-                  <ul className="menu-list">
-                    <li>
-                      <h3 className="navbar-item" to="/start">
-                        Learn Ml5.js
-                      </h3>
-                    </li>
-                    <li>
-                      <Link className="navbar-item" to="/start">
-                        Getting started
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="navbar-item" to="/reference">
-                        Reference
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="navbar-item" to="/contact/examples">
-                        Github
-                      </Link>
-                    </li>
 
-                  </ul>
-                </section>
-              </div>
-              <div className="column is-4">
-                <section>
-                  <ul className="menu-list">
-                    <li>
-                      <h3 className="navbar-item" to="/start">
-                        Community
-                      </h3>
-                    </li>
-                    <li>
-                      <Link className="navbar-item" to="/experiments">
-                        Experiments
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="navbar-item" to="/blog">
-                        Blog
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="navbar-item" to="/contact">
-                        Contact
-                      </Link>
-                    </li>
-                    <li>
-                      <a
-                        className="navbar-item"
-                        href="/admin/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Log In
-                      </a>
-                    </li>
-                  </ul>
-                </section>
-              </div>
-              <div className="column is-4 social">
-                <a title="facebook" href="https://facebook.com">
-                  <img
-                    src={facebook}
-                    alt="Facebook"
-                    style={{ width: "1em", height: "1em" }}
-                  />
-                </a>
-                <a title="twitter" href="https://twitter.com">
-                  <img
-                    className="fas fa-lg"
-                    src={twitter}
-                    alt="Twitter"
-                    style={{ width: "1em", height: "1em" }}
-                  />
-                </a>
-                <a title="instagram" href="https://instagram.com">
-                  <img
-                    src={instagram}
-                    alt="Instagram"
-                    style={{ width: "1em", height: "1em" }}
-                  />
-                </a>
-                <a title="vimeo" href="https://vimeo.com">
-                  <img
-                    src={vimeo}
-                    alt="Vimeo"
-                    style={{ width: "1em", height: "1em" }}
-                  />
-                </a>
-              </div>
-            </div>
+        <div className="flexContainer">
+          <div className="flexContainer__item">
+            <section className="menu">
+              <ul className="menu-list">
+                <li>
+                  <h3 className="Footer__item Footer__item--title" to="/start">
+                    Docs
+                  </h3>
+                </li>
+                <li>
+                  <Link className="Footer__item" to="/start">
+                    Getting Started
+                  </Link>
+                </li>
+                <li>
+                  <Link className="Footer__item" to="/reference">
+                    API Reference
+                  </Link>
+                </li>
+              </ul>
+            </section>
           </div>
+          <div className="flexContainer__item">
+            <section>
+              <ul className="menu-list">
+                <li>
+                  <h3 className="Footer__item Footer__item--title" to="/start">
+                    Community
+                  </h3>
+                </li>
+                <li>
+                  <Link className="Footer__item" to="/experiments">
+                    Experiments
+                  </Link>
+                </li>
+                <li>
+                  <Link className="Footer__item" to="/blog">
+                    Tutorial
+                  </Link>
+                </li>
+                <li>
+                  <a
+                    className="Footer__item"
+                    href="/admin/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Log In
+                  </a>
+                </li>
+              </ul>
+            </section>
+          </div>
+          <div className="flexContainer__item">
+            <section>
+              <ul className="menu-list">
+                <li>
+                  <h3 className="Footer__item--title Footer__item" to="/start">
+                    Contribute
+                  </h3>
+                </li>
+                <li>
+                  <Link className="Footer__item" to="/experiments">
+                    Github
+                  </Link>
+                </li>
+                <li>
+                  <Link className="Footer__item" to="/blog">
+                    Tutorial
+                  </Link>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+
+        <div className="Footer__social">
+          <a title="facebook" href="https://facebook.com">
+            <img
+              src={facebook}
+              alt="Facebook"
+              style={{ width: "1em", height: "1em" }}
+            />
+          </a>
+          <a title="twitter" href="https://twitter.com">
+            <img
+              className="fas fa-lg"
+              src={twitter}
+              alt="Twitter"
+              style={{ width: "1em", height: "1em" }}
+            />
+          </a>
+          <a title="instagram" href="https://instagram.com">
+            <img
+              src={instagram}
+              alt="Instagram"
+              style={{ width: "1em", height: "1em" }}
+            />
+          </a>
+          <a title="vimeo" href="https://vimeo.com">
+            <img
+              src={vimeo}
+              alt="Vimeo"
+              style={{ width: "1em", height: "1em" }}
+            />
+          </a>
         </div>
       </footer>
     );

@@ -1,6 +1,6 @@
 ---
 templateKey: 'model-page'
-title: pix2pix
+title: pix2pix()
 date: 2017-01-04T15:04:10.000Z
 featuredpost: true
 description: >-

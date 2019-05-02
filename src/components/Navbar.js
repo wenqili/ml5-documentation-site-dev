@@ -40,7 +40,7 @@ const Navbar = class extends React.Component {
         aria-label="main-navigation"
       >
         <div className="container">
-          <div className="navbar-brand">
+          <div className="Navbar__brand navbar-brand">
             <Link to="/" className="navbar-item" title="Logo">
               <img src={logo} alt="ml5.js logo" />
             </Link>
@@ -57,31 +57,30 @@ const Navbar = class extends React.Component {
           </div>
           <div
             id="navMenu"
-            className={`navbar-menu ${this.state.navBarActiveClass}`}
+            className={`Navbar__menu ${this.state.navBarActiveClass}`}
           >
-            <div className="navbar-start has-text-centered">
+            <div className="Navbar__itemContainer">
               <Link className="navbar-item" to="/start">
                 Getting Started
               </Link>
-              <Link className="navbar-item" to="/reference">
+              <Link className="navbar-item" to="/reference/api-Pix2Pix/">
                 Reference
               </Link>
               <Link className="navbar-item" to="/experiments">
-                Experiments
+                Community
               </Link>
               <Link className="navbar-item" to="/about">
                 About
               </Link>
 
-
               <Link className="navbar-item" to="/contact">
-               Contact
+                Contact
               </Link>
               {/*<Link className="navbar-item" to="/contact/examples">*/}
               {/*  Form Examples*/}
               {/*</Link>*/}
             </div>
-            <div className="navbar-end has-text-centered">
+            <div className="Navbar__itemContainer">
               <a
                 className="navbar-item"
                 href="https://github.com/AustinGreen/gatsby-netlify-cms-boilerplate"

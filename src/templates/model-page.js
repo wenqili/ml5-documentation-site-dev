@@ -18,17 +18,28 @@ export const ModelPageTemplate = ({
   const PostContent = contentComponent || Content;
 
   return (
-    <section className="section">
+    <article className="Section">
       {helmet || ""}
-      <div className="container content">
+      <div className="container">
         <div className="columns">
           <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
+            <h1 className="">
               {title}
+                {tags && tags.length ? (
+                  <span className="TagList__wrapper">
+                    <ul className="TagList">
+                      {tags.map(tag => (
+                        <li key={tag + `tag`} className={`TagList__`+tag}>
+                          <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </span>
+                ) : null}
             </h1>
             <p>{description}</p>
             <PostContent content={content} />
-            {tags && tags.length ? (
+            {/* {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
                 <h4>Tags</h4>
                 <ul className="taglist">
@@ -39,11 +50,11 @@ export const ModelPageTemplate = ({
                   ))}
                 </ul>
               </div>
-            ) : null}
+            ) : null} */}
           </div>
         </div>
       </div>
-    </section>
+    </article>
   );
 };
 
@@ -60,31 +71,32 @@ const ModelPage = ({ data }) => {
 
   return (
     <Layout>
-      <div>
-        <h2>Reference</h2>
-      </div>
-      <div className="flexContainer">
-        <aside className="Sidebar">
-          <ModelList />
-        </aside>
-        <ModelPageTemplate
-          content={post.html}
-          contentComponent={HTMLContent}
-          description={post.frontmatter.description}
-          helmet={
-            <Helmet titleTemplate="%s | Blog">
-              <title>{`${post.frontmatter.title}`}</title>
-              <meta
-                name="description"
-                content={`${post.frontmatter.description}`}
-              />
-            </Helmet>
-          }
-          tags={post.frontmatter.tags}
-          title={post.frontmatter.title}
-        />
-        Î
-      </div>
+      <section className="container">
+        <div className="flexContainer">
+          <section className="Sidebar">
+            <div>
+              <span className="Sidebar__title">Model</span>
+            </div>
+            <ModelList />
+          </section>
+          <ModelPageTemplate
+            content={post.html}
+            contentComponent={HTMLContent}
+            description={post.frontmatter.description}
+            helmet={
+              <Helmet titleTemplate="%s | Models">
+                <title>{`${post.frontmatter.title}`}</title>
+                <meta
+                  name="description"
+                  content={`${post.frontmatter.description}`}
+                />
+              </Helmet>
+            }
+            tags={post.frontmatter.tags}
+            title={post.frontmatter.title}
+          />
+        </div>
+      </section>
     </Layout>
   );
 };

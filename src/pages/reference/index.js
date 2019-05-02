@@ -7,6 +7,9 @@ export default class ReferenceIndexPage extends React.Component {
   render() {
     return (
       <Layout>
+        <article>
+
+        </article>
         <div>
           <h2>Reference</h2>
         </div>
@@ -14,13 +17,13 @@ export default class ReferenceIndexPage extends React.Component {
           <aside className="Sidebar">
             <ModelList />
           </aside>
-          <section className="section">
+          <article className="">
             <div className="container">
               <div className="content">
                 <p>test</p>
               </div>
             </div>
-          </section>Î
+          </article>
         </div>
       </Layout>
     );

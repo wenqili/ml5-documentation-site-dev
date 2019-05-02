@@ -1,25 +1,28 @@
 // Color
-
-$primary-color: purple;
-$secondary-color: white;
-$primary-font-color: #333;
-$secondary-font-color: #333;
+$blue: #4A90E2;
+$purple: #A256FF;
+$green: #6DB51E;
+$primary-color: $blue;
+$secondary-color:$purple;
+$primary-font-color: #000000;
+$secondary-font-color: #929494;
 
 // Typography
 /// Brand font
-$primary-font-family: "Helvetica", "Arial", sans-serif !default;
-$secondary-font-family: "Helvetica", "Arial", sans-serif !default;
+$primary-font-family: "HK Grotesk", sans-serif !default;
+$secondary-font-family: "HK Grotesk", "Arial", sans-serif !default;
 $monospace-font-family: monospace !default;
 
-$font-size-1: 3rem;
-$font-size-2: 20px;
-$font-size-3: 13px;
-$font-size-4: 3rem;
-$font-size-5: 3rem;
+$font-size-1: 36px; // for model name on model page
+$font-size-2: 30px; // for tab
+$font-size-3: 16px; // for documentation title
+$font-size-4: 20px; // for sidebar list item
+$font-size-5: 12px; // tag
 $font-size-6: 3rem;
 
 $weight-light: 300 !default;
-$weight-nromal: 400 !default;
+$weight-medium: 600 !default;
+$weight-normal: 400 !default;
 $weight-bold: 700 !default;
 
 // Resonpsiveness

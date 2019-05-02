@@ -1,0 +1,15 @@
+body {
+  font-family: $primary-font-family;
+}
+
+a {
+  color: $primary-font-color;
+
+  &:hover {
+    color: $primary-color;
+  }
+
+  &:active{
+    color: $primary-color;
+  }
+}

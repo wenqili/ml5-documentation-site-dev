@@ -1,51 +1,41 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link, graphql, StaticQuery } from 'gatsby'
-import PreviewCompatibleImage from './PreviewCompatibleImage'
+import React from "react";
+import PropTypes from "prop-types";
+import { Link, graphql, StaticQuery } from "gatsby";
+import PreviewCompatibleImage from "./PreviewCompatibleImage";
 
 class ModelList extends React.Component {
-    render() {
-        const { data } = this.props
-        const { edges: models } = data.allMarkdownRemark
+  render() {
+    const { data } = this.props;
+    const { edges: models } = data.allMarkdownRemark;
 
-        return (
-            <ul className="">
-                {models &&
-                models.map(({ node: model }) => (
-                    <li className="ModelList__item" key={model.id}>
-                        <article
-                            className={`${
-                                model.frontmatter.featuredpost ? 'is-featured' : ''
-                                }`}
-                        >
-                                <h3 className="ModelList__title">
-                                    <Link
-                                        className=""
-                                        to={model.fields.slug}
-                                    >
-                                        {model.frontmatter.title}
-                                    </Link>
-
-                                </h3>
-                        </article>
-                    </li>
-                ))}
-            </ul>
-        )
-    }
+    return (
+      <ul className="">
+        {models &&
+          models.map(({ node: model }) => (
+            <li className="ModelList__item" key={model.id}>
+              <div className="ModelList__title">
+                <Link className="" to={model.fields.slug}>
+                  {model.frontmatter.title}
+                </Link>
+              </div>
+            </li>
+          ))}
+      </ul>
+    );
+  }
 }
 
 ModelList.propTypes = {
-    data: PropTypes.shape({
-        allMarkdownRemark: PropTypes.shape({
-            edges: PropTypes.array,
-        }),
-    }),
-}
+  data: PropTypes.shape({
+    allMarkdownRemark: PropTypes.shape({
+      edges: PropTypes.array
+    })
+  })
+};
 
 export default () => (
-    <StaticQuery
-        query={graphql`
+  <StaticQuery
+    query={graphql`
       query ModelListQuery {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
@@ -76,6 +66,6 @@ export default () => (
         }
       }
     `}
-        render={(data, count) => <ModelList data={data} count={count} />}
-    />
-)
+    render={(data, count) => <ModelList data={data} count={count} />}
+  />
+);

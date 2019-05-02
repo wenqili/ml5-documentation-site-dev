@@ -1,5 +1,6 @@
 $Navbar-background-color: white !default;
 $Navbar-height: 3.25rem !default;
+$Navbar-breakpoint: $tablet !default;
 
 .Navbar {
   position: fixed;
@@ -14,10 +15,42 @@ $Navbar-height: 3.25rem !default;
   background-color: $Navbar-background-color;
 
   // container inside Navbar
-  & > .container{
+  & > .container {
     display: flex;
     width: 100%;
   }
 }
 
+.Navbar__brand {
+  justify-content: flex-start;
+}
 
+.Navbar__menu {
+  display: none;
+
+  @include tablet-up() {
+    display: flex;
+    align-items: stretch;
+    flex-grow: 1;
+    justify-content: flex-end;
+  }
+
+  @include mobile-only(){
+    &.is-active {
+      display: block;
+    }
+  }
+}
+
+.Navbar__itemContainer {
+  display: flex;
+  align-items: stretch;
+}
+
+
+//temporary overwrite
+.navbar-burger {
+  @include tablet-up() {
+    display: none;
+  }
+}
