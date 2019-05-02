@@ -29,22 +29,28 @@ class BlogRoll extends React.Component {
                   </div>
                 ) : null}
                 <header className="Post__meta">
-                  <h3 className="post-meta">
-                    <Link
-                      className="title has-text-primary is-size-4"
-                      to={post.fields.slug}
-                    >
+                  <h3>
+                    <Link className="Post__title" to={post.fields.slug}>
                       {post.frontmatter.title}
                     </Link>
                   </h3>
-                  <h4>By Author</h4>
+                  <h4>By {post.frontmatter.author}</h4>
                   <p>
                     {post.excerpt}
                     <br />
                     <br />
-                    <Link className="" to={post.fields.slug}>
-                      Keep Reading
-                    </Link>
+                    {post.frontmatter.externalLink ? (
+                      <a
+                        className="Post__link"
+                        href={post.frontmatter.externalLink}
+                      >
+                        {post.frontmatter.externalLink}
+                      </a>
+                    ) : (
+                      <Link className="Post__link" to={post.fields.slug}>
+                        Keep Reading
+                      </Link>
+                    )}
                   </p>
                 </header>
               </div>
@@ -80,12 +86,14 @@ export default () => (
               }
               frontmatter {
                 title
+                author
+                externalLink
                 templateKey
                 date(formatString: "MMMM DD, YYYY")
                 featuredpost
                 featuredimage {
                   childImageSharp {
-                    fluid(maxWidth: 120, quality: 100) {
+                    fluid(maxWidth: 1440, quality: 100) {
                       ...GatsbyImageSharpFluid
                     }
                   }
