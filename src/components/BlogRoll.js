@@ -43,6 +43,8 @@ class BlogRoll extends React.Component {
                       <a
                         className="Post__link"
                         href={post.frontmatter.externalLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
                       >
                         {post.frontmatter.externalLink}
                       </a>

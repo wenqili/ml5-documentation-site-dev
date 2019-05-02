@@ -1,8 +1,9 @@
 .Sidebar {
-  width: 248px;
+  width: 16%;
+  min-width: 140px;
 }
 
-.Sidebar__title{
+.Sidebar__title {
   font-size: $font-size-4;
   color: $secondary-color;
   font-weight: $weight-medium;
