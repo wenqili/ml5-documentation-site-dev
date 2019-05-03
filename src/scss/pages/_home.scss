@@ -1,0 +1,59 @@
+.home__section {
+  padding: 2rem 1.5rem;
+}
+
+.home__featuredTitle {
+  color: white;
+  z-index: 100;
+  padding: calc(#{$gutter} * 2);
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+}
+
+.home__featuredImage {
+  position: relative;
+}
+
+.home__overlay {
+  position: absolute;
+  background-color: #3636366e;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.home__pitchTitle {
+  color: $purple !important;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: $font-size-2;
+}
+
+.home__pitchDescription {
+  font-size: $font-size-pitch;
+  font-weight: $weight-light;
+  width: 60%;
+  margin: auto;
+  a {
+    color: $purple;
+  }
+}
+
+.home__figureWrapper {
+  display: flex;
+  align-items: center;
+  height: 300px;
+}
+
+.home__figure--onethird {
+  width: 100%;
+  padding: 30%;
+}
+
+.home__teamHeadshot {
+  width: 50px;
+  height: 50px;
+}

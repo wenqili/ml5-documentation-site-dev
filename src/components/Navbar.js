@@ -55,6 +55,11 @@ const Navbar = class extends React.Component {
               <span />
             </div>
           </div>
+          <div className="Navbar__tagline">
+            <span className="navbar-item">
+              🌟Friendly machine learning for the web!🌟
+            </span>
+          </div>
           <div
             id="navMenu"
             className={`Navbar__menu ${this.state.navBarActiveClass}`}
@@ -69,10 +74,10 @@ const Navbar = class extends React.Component {
               <Link className="navbar-item" to="/community">
                 Community
               </Link>
-
-              {/* <Link className="navbar-item" to="/about">
+              <Link className="navbar-item" to="/about">
                 About
-              </Link> */}
+              </Link>
+
               {/* <Link className="navbar-item" to="/contact">
                 Contact
               </Link> */}
@@ -91,6 +96,12 @@ const Navbar = class extends React.Component {
                   <img src={github} alt="Github" />
                 </span>
               </a>
+            </div>
+
+            <div className="Navbar__itemContainer">
+              <form className="navbar-item">
+                <input type="text" name="search" value="search placeholder" />
+              </form>
             </div>
           </div>
         </div>

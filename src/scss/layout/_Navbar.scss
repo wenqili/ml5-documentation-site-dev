@@ -35,6 +35,10 @@ $Navbar-breakpoint: $tablet !default;
   justify-content: flex-start;
 }
 
+.Navbar__tagline {
+  display: flex;
+}
+
 .Navbar__menu {
   display: none;
 

@@ -1,17 +1,15 @@
 ---
 templateKey: home-page
 title: Friendly Machine Learning for the Web.
-image: /img/placeholder.jpg
-heading: This is heading for home page
-subheading: This is sub-heading for home page
+image: /img/itay-banner.jpg
+heading: Let’s read a story!Discover how Itay Niv created a story-telling app for children!
+subheading: "This is sub-heading for home page"
 mainpitch:
-  title: Friendly Machine Learning for the Web.
+  title: Why ml5.js?
   description: >
     ml5.js aims to make machine learning approachable for a broad audience of artists,
     creative coders, and students. The library provides access to machine learning algorithms
     and models in the browser, building on top of TensorFlow.js with no other external dependencies.
-
-
 
 description: >-
   The library is supported by code examples, tutorials, and sample datasets with an emphasis on ethical computing.
@@ -20,19 +18,13 @@ description: >-
 
 intro:
   blurbs:
-    - image: /img/bird.jpg
+    - image: /img/tenser_flow_figure.png
       text: >
-        ml5.js is a friendly high level interface to TensorFlow.js, a library for handling GPU-accelerated
-        mathematical operations and memory management for machine learning algorithms.
-    - image: /img/bird.jpg
+        ml5.js is a friendly high level interface to TensorFlow.js, a library for handling GPU-accelerated mathematical operations and memory management for machine learning algorithms.
+    - image: /img/wrapper_figure.png
       text: >
-        ml5.js is a friendly high level interface to TensorFlow.js, a library for handling GPU-accelerated
-        mathematical operations and memory management for machine learning algorithms.
-    - image: /img/bird.jpg
-      text: >
-        ml5.js is a friendly high level interface to TensorFlow.js, a library for handling GPU-accelerated
-        mathematical operations and memory management for machine learning algorithms.
-    - image: /img/bird.jpg
+        ml5.js provides immediate access in the browser to pre-trained models for detecting human poses, generating text, styling an image with another, composing music, pitch detection, and common English language word relationships.
+    - image: /img/unknown_figure.png
       text: >
         ml5.js is a friendly high level interface to TensorFlow.js, a library for handling GPU-accelerated
         mathematical operations and memory management for machine learning algorithms.
@@ -42,20 +34,26 @@ intro:
     java’s origin and support the farmers that grew it. We take coffee
     production, roasting and brewing seriously and we’re glad to pass that
     knowledge to anyone. This is an edit via identity...
-main:
-  heading: Great coffee with no compromises
-  description: >
-    We hold our coffee to the highest standards from the shrub to the cup.
-    That’s why we’re meticulous and transparent about each step of the coffee’s
-    journey. We personally visit each farm to make sure the conditions are
-    optimal for the plants, farmers and the local environment.
-  image1:
-    alt: A close-up of a paper filter filled with ground coffee
-    image: /img/products-grid3.jpg
-  image2:
-    alt: A green cup of a coffee on a wooden table
-    image: /img/products-grid2.jpg
-  image3:
-    alt: Coffee beans
-    image: /img/products-grid1.jpg
+
+# main:
+#   heading: Discover these awesome learning models!
+#   description: >
+#     place holder!
+#   blurbs:
+#     - image: /img/products-grid3.jpg
+#     text: >
+#       PoseNet is a machine learning model that allows for Real-time Human Pose Estimation.
+#     - image: /img/products-grid3.jpg
+#     text: >
+#       PoseNet is a machine learning model that allows for Real-time Human Pose Estimation.
+#     - image: /img/products-grid3.jpg
+#     text: >
+#       PoseNet is a machine learning model that allows for Real-time Human Pose Estimation.
+#     - image: /img/products-grid3.jpg
+#     text: >
+#       PoseNet is a machine learning model that allows for Real-time Human Pose Estimation.
+
+team:
+  image: /img/joey.png
+  profile: Joey Lee is a New York based designer, creative technologist, and geographer who leads the development of ml5.js by creating new examples, maintaining the library, doing code reviews, addressing issues, and merging/communicating with contributors.
 ---

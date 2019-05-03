@@ -7,8 +7,7 @@
 @import "./layout/Navbar", "./layout/Sidebar", "./layout/wrapper",
   "./layout/flexContainer", "./layout/Section", "./layout/Footer";
 
-@import "./components/ModelList", "./components/TagList", "./components/Post";
+@import "./components/ModelList", "./components/TagList", "./components/Post",
+  "./components/Button";
 
-// @import './pages/'
-
-// @import
+@import "./pages/home";
