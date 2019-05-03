@@ -14,6 +14,8 @@ export const HomePageTemplate = ({
   mainpitch,
   description,
   intro,
+  version,
+  model,
   team
 }) => (
   <div>
@@ -77,7 +79,17 @@ export const HomePageTemplate = ({
                 </div>
 
                 <Features gridItems={intro.blurbs} />
+                <h3>{version.heading}</h3>
+                <h4>{version.recent}</h4>
+                <pre class="language-javascript">
+                  <code class="language-javascript">{version.snippet}</code>
+                </pre>
+                <h3>{model.heading}</h3>
+
+                <Features gridItems={model.blurbs} />
+
                 <div className="columns">
+                  <h3>{team.heading}</h3>
                   <div className="home__teamHeadshot">
                     <PreviewCompatibleImage imageInfo={team} />
                   </div>
@@ -117,6 +129,8 @@ const HomePage = ({ data }) => {
         mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
         intro={frontmatter.intro}
+        version={frontmatter.version}
+        model={frontmatter.model}
         team={frontmatter.team}
       />
     </Layout>
@@ -166,6 +180,26 @@ export const pageQuery = graphql`
           heading
           description
         }
+        version {
+          heading
+          recent
+          snippet
+        }
+
+        model {
+          blurbs {
+            image {
+              childImageSharp {
+                fluid(maxWidth: 240, quality: 64) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            text
+          }
+          heading
+          description
+        }
         team {
           image {
             childImageSharp {
@@ -174,6 +208,7 @@ export const pageQuery = graphql`
               }
             }
           }
+          heading
           profile
         }
       }

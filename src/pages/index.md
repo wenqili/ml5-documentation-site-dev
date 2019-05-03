@@ -35,6 +35,33 @@ intro:
     production, roasting and brewing seriously and we’re glad to pass that
     knowledge to anyone. This is an edit via identity...
 
+version:
+  heading: Build tools using easy classification systems with tons of **pre trained models**!
+  recent: "Current version: 0.71   Last update: 24 April, 2019"
+  snippet: >
+    <div>?</div>
+
+model:
+  blurbs:
+    - image: /img/modelplaceholder.png
+      text: >
+        PoseNet is a machine learning model that allows for Real-time Human Pose Estimation.
+    - image: /img/modelplaceholder.png
+      text: >
+        PoseNet is a machine learning model that allows for Real-time Human Pose Estimation.
+    - image: /img/modelplaceholder.png
+      text: >
+        PoseNet is a machine learning model that allows for Real-time Human Pose Estimation.
+    - image: /img/modelplaceholder.png
+      text: >
+        PoseNet is a machine learning model that allows for Real-time Human Pose Estimation.
+  heading: Discover these awesome learning models!
+  description: >
+    Kaldi is the ultimate spot for coffee lovers who want to learn about their
+    java’s origin and support the farmers that grew it. We take coffee
+    production, roasting and brewing seriously and we’re glad to pass that
+    knowledge to anyone. This is an edit via identity...
+
 # main:
 #   heading: Discover these awesome learning models!
 #   description: >
@@ -54,6 +81,7 @@ intro:
 #       PoseNet is a machine learning model that allows for Real-time Human Pose Estimation.
 
 team:
+  heading: Meet our team!
   image: /img/joey.png
   profile: Joey Lee is a New York based designer, creative technologist, and geographer who leads the development of ml5.js by creating new examples, maintaining the library, doing code reviews, addressing issues, and merging/communicating with contributors.
 ---

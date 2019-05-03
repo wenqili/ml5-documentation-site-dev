@@ -8,7 +8,7 @@ const FeatureGrid = ({ gridItems }) => (
       <div key={item.text} className="column is-4">
         <section className="section">
           <div className="home__figureWrapper">
-            <div className="home__figure--onethird">
+            <div className="home__figure">
               <PreviewCompatibleImage imageInfo={item} />
             </div>
           </div>
