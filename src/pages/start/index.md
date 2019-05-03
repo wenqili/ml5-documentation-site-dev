@@ -16,9 +16,9 @@ ml5.js is heavily inspired by [Processing](https://processing.org/) and [p5.js](
 
 Reference the [latest version](https://unpkg.com/ml5@0.1.3/dist/ml5.min.js) of ml5.js using a script tag in an HTML file as below:
 
-```markup
+```HTML
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>Getting Started with ml5.js</title>
     <script src="https://unpkg.com/ml5@0.1.3/dist/ml5.min.js"></script>
