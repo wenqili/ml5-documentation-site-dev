@@ -1,9 +1,10 @@
 .flexContainer {
   display: flex;
   flex-grow: 0.5;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .flexContainer__item {
-  padding-top: 56px;
   flex-grow: 1;
 }

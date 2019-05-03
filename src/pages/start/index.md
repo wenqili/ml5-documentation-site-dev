@@ -53,7 +53,7 @@ Let's add something more to classify an image using the pre-trained MobileNet mo
     <span id="result">...</span> with a confidence of
     <span id="probability">...</span></p>
     <img src="https://ml5js.org/docs/assets/img/bird.jpg"
-     crossorigin="anonymous" id="image" width="400">
+     crossorigin="anonymous" id="image" width="400" crossorigin="anonymous" id="image" width="400">
 
     <script>
       // The image we want to classify

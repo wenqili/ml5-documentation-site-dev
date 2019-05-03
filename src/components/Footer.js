@@ -18,7 +18,7 @@ const Footer = class extends React.Component {
         <div className="flexContainer">
           <div className="flexContainer__item">
             <section className="menu">
-              <ul className="menu-list">
+              <ul className="Footer_list">
                 <li>
                   <h3 className="Footer__item Footer__item--title" to="/start">
                     Docs
@@ -39,7 +39,7 @@ const Footer = class extends React.Component {
           </div>
           <div className="flexContainer__item">
             <section>
-              <ul className="menu-list">
+              <ul className="Footer_list">
                 <li>
                   <h3 className="Footer__item Footer__item--title" to="/start">
                     Community
@@ -70,7 +70,7 @@ const Footer = class extends React.Component {
           </div>
           <div className="flexContainer__item">
             <section>
-              <ul className="menu-list">
+              <ul className="Footer_list">
                 <li>
                   <h3 className="Footer__item--title Footer__item" to="/start">
                     Contribute

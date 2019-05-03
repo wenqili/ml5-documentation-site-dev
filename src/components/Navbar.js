@@ -39,7 +39,7 @@ const Navbar = class extends React.Component {
         role="navigation"
         aria-label="main-navigation"
       >
-        <div className="container">
+        <div className="Navbar__wrapper">
           <div className="Navbar__brand navbar-brand">
             <Link to="/" className="navbar-item" title="Logo">
               <img src={logo} alt="ml5.js logo" />

@@ -1,9 +1,9 @@
 // Color
-$blue: #4A90E2;
-$purple: #A256FF;
-$green: #6DB51E;
+$blue: #4a90e2;
+$purple: #a256ff;
+$green: #6db51e;
 $primary-color: $blue;
-$secondary-color:$purple;
+$secondary-color: $purple;
 $primary-font-color: #000000;
 $secondary-font-color: #929494;
 
@@ -42,3 +42,7 @@ $tablet: 769px !default;
 
 /// mobile
 $mobile: $tablet - 1px !default;
+
+///layout variables
+$sidebar-width: 200px;
+$gutter: 0.75rem;

@@ -20,22 +20,22 @@ export const ModelPageTemplate = ({
   return (
     <article className="Section">
       {helmet || ""}
-      <div className="container">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
+      <div className="">
+        <div className="">
+          <div className="">
             <h1 className="">
               {title}
-                {tags && tags.length ? (
-                  <span className="TagList__wrapper">
-                    <ul className="TagList">
-                      {tags.map(tag => (
-                        <li key={tag + `tag`} className={`TagList__`+tag}>
-                          <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </span>
-                ) : null}
+              {tags && tags.length ? (
+                <span className="TagList__wrapper">
+                  <ul className="TagList">
+                    {tags.map(tag => (
+                      <li key={tag + `tag`} className={`TagList__` + tag}>
+                        <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                      </li>
+                    ))}
+                  </ul>
+                </span>
+              ) : null}
             </h1>
             <p>{description}</p>
             <PostContent content={content} />
@@ -71,7 +71,7 @@ const ModelPage = ({ data }) => {
 
   return (
     <Layout>
-      <section className="container">
+      <section className="">
         <div className="flexContainer">
           <section className="Sidebar">
             <div>

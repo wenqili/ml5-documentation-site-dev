@@ -15,10 +15,20 @@ $Navbar-breakpoint: $tablet !default;
   background-color: $Navbar-background-color;
 
   // container inside Navbar
-  & > .container {
-    display: flex;
-    width: 100%;
-  }
+  // & > .container {
+  //   display: flex;
+  //   width: 100%;
+  // }
+}
+
+.Navbar__wrapper {
+  display: flex;
+  width: 100%;
+  // padding-top: 0.8rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  // padding-bottom: 0.8rem;
+  height: 3.75rem;
 }
 
 .Navbar__brand {
@@ -35,7 +45,7 @@ $Navbar-breakpoint: $tablet !default;
     justify-content: flex-end;
   }
 
-  @include mobile-only(){
+  @include mobile-only() {
     &.is-active {
       display: block;
     }
@@ -46,7 +56,6 @@ $Navbar-breakpoint: $tablet !default;
   display: flex;
   align-items: stretch;
 }
-
 
 //temporary overwrite
 .navbar-burger {

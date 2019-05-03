@@ -20,9 +20,9 @@ export const StartPageTemplate = ({
   return (
     <article className="Section">
       {helmet || ""}
-      <div className="container">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
+      <div className="">
+        <div className="">
+          <div className="">
             <h1 className="">
               {title}
               {tags && tags.length ? (
@@ -71,7 +71,7 @@ const StartPage = ({ data }) => {
 
   return (
     <Layout>
-      <section className="container">
+      <section className="">
         <div className="flexContainer">
           <section className="Sidebar">
             <div>

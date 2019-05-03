@@ -1,6 +1,9 @@
 .Sidebar {
   width: 16%;
-  min-width: 140px;
+  min-width: $sidebar-width;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  position: fixed;
 }
 
 .Sidebar__title {

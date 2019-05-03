@@ -2,15 +2,23 @@
   background-color: $primary-color;
   display: flex;
   margin-top: 100px;
+  padding-top: 56px;
   padding-bottom: 30px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   justify-content: space-between;
 }
 
 .Footer__logo {
-  padding: 56px;
+  padding-top: 40px;
+  padding-left: 56px;
+  padding-right: 56px;
   img {
     max-width: 70px;
   }
+}
+
+.Footer__list {
 }
 
 .Footer__item {
@@ -19,14 +27,15 @@
   font-size: 18px;
   margin-bottom: 0.5em;
 
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 0.75em;
+  padding-left: 0.75em;
 
   &--title {
     // padding: 0.5em 0.75em;
     font-size: $font-size-4;
-    margin-bottom: 1em;
-    padding-left: 0.75em;
+    padding-left: 0.65em;
     padding-right: 0.75em;
   }
 }
@@ -34,7 +43,6 @@
 .Footer__social {
   display: flex;
   align-items: stretch;
-  padding-right: 56px;
   padding-left: 56px;
 
   a {
