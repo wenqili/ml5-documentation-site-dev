@@ -9,8 +9,14 @@
 .ModelList__title {
   font-size: $font-size-4;
   line-height: 38px;
-	// padding-left: 24px;
-	// padding-right: 8px;
-	// padding-top: 4px;
-	// padding-bottom: 4px;
+  // padding-left: 24px;
+  // padding-right: 8px;
+  // padding-top: 4px;
+  // padding-bottom: 4px;
+}
+
+.ModelList__link {
+  &--active {
+    color: $purple;
+  }
 }

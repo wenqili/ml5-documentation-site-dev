@@ -7,14 +7,17 @@ class ModelList extends React.Component {
   render() {
     const { data } = this.props;
     const { edges: models } = data.allMarkdownRemark;
-
+    console.log(this.props);
     return (
       <ul className="">
         {models &&
           models.map(({ node: model }) => (
             <li className="ModelList__item" key={model.id}>
               <div className="ModelList__title">
-                <Link className="" to={model.fields.slug}>
+                <Link
+                  activeClassName="ModelList__link--active"
+                  to={model.fields.slug}
+                >
                   {model.frontmatter.title}
                 </Link>
               </div>
@@ -59,6 +62,8 @@ export default () => (
         }
       }
     `}
-    render={(data, count) => <ModelList data={data} count={count} />}
+    render={(data, count) => (
+      <ModelList active="10" data={data} count={count} />
+    )}
   />
 );

@@ -1,7 +1,6 @@
 ---
+templateKey: "model-page"
 id: CharRNN
-
-templateKey: 'model-page'
 title: CharRNN()
 date: 2017-01-04T15:04:10.000Z
 featuredpost: true
@@ -23,15 +22,15 @@ You can train your own models [using this tutorial](/docs/training-lstm) or use 
 
 ```javascript
 // Create the character level generator with a pre trained model
-const rnn = ml5.charRNN('models/bolaño/', modelLoaded);
+const rnn = ml5.charRNN("models/bolaño/", modelLoaded);
 
 // When the model is loaded
 function modelLoaded() {
-  console.log('Model Loaded!');
+  console.log("Model Loaded!");
 }
 
 // Generete content
-rnn.generate({ seed: 'the meaning of pizza is' }, function(err, results){
+rnn.generate({ seed: "the meaning of pizza is" }, function(err, results) {
   console.log(results);
 });
 ```
@@ -40,77 +39,87 @@ rnn.generate({ seed: 'the meaning of pizza is' }, function(err, results){
 
 ## Syntax
 
-  ```javascript
-  ml5.charRNN(model, ?callback)
-  ```
+```javascript
+ml5.charRNN(model, ?callback)
+```
 
 ### Parameters
-  - `model` - The path to the trained charRNN model.
 
-  - `callback` - Optional. A callback to be called once the model has loaded. If no callback is provided, it will return a promise that will be resolved once the model has loaded.
+- `model` - The path to the trained charRNN model.
+
+- `callback` - Optional. A callback to be called once the model has loaded. If no callback is provided, it will return a promise that will be resolved once the model has loaded.
 
 ## Properties
 
-  ```javascript
-  .ready
-  ```
-  > Boolean value that specifies if the model has loaded.
+```javascript
+.ready
+```
 
-   ```javascript
-  .state
-  ```
-  > The current state of the model.
+> Boolean value that specifies if the model has loaded.
 
-  ```javascript
-  .model
-  ```
-  > The pre-trained charRNN model.
+```javascript
+.state
+```
 
-  ```javascript
-  .vocabSize
-  ```
-  > The vocabulary size (or total number of possible characters).
+> The current state of the model.
+
+```javascript
+.model
+```
+
+> The pre-trained charRNN model.
+
+```javascript
+.vocabSize
+```
+
+> The vocabulary size (or total number of possible characters).
 
 ## Methods
 
-  ```javascript
-  .generate(options, ?callback)
-  ```
-  > Generates content in a stateless manner, based on some initial text (known as a "seed"). Returns a string.
+```javascript
+.generate(options, ?callback)
+```
 
-  `options` -  An object specifying the input parameters of seed, length and temperature. Default length is 20, temperature is 0.5 and seed is a random character from the model. The object should look like this:
-  ```javascript
-  {
-    seed: 'The meaning of pizza is'
-    length: 20,
-    temperature: 0.5
-  }
-  ```
+> Generates content in a stateless manner, based on some initial text (known as a "seed"). Returns a string.
 
-  `callback` - Optional. A function to be called when the model has generated content. If no callback is provided, it will return a promise that will be resolved once the model has generated new content.
+`options` - An object specifying the input parameters of seed, length and temperature. Default length is 20, temperature is 0.5 and seed is a random character from the model. The object should look like this:
 
-  ```javascript
-  .feed(seed, ?callback)
-  ```
-  > Feed a string of characters to the model state.
+```javascript
+{
+  seed: 'The meaning of pizza is'
+  length: 20,
+  temperature: 0.5
+}
+```
 
-  `seed` -  A string to feed the charRNN model state.
+`callback` - Optional. A function to be called when the model has generated content. If no callback is provided, it will return a promise that will be resolved once the model has generated new content.
 
-  `callback` - Optional. A function to be called when the model finished adding the seed. If no callback is provided, it will return a promise that will be resolved once seed has been fed.
+```javascript
+.feed(seed, ?callback)
+```
 
-  ```javascript
-  .predict(temperature, ?callback)
-  ```
-  > Feed a string of characters to the model state.
+> Feed a string of characters to the model state.
 
-  `predict` -  Predict the next character based on the model's current state.
+`seed` - A string to feed the charRNN model state.
 
-  `callback` - Optional. A function to be called when the model finished adding the seed. If no callback is provided, it will return a promise that will be resolved once the prediction has been generated.
+`callback` - Optional. A function to be called when the model finished adding the seed. If no callback is provided, it will return a promise that will be resolved once seed has been fed.
 
-  ```javascript
-  .reset()
-  ```
-  > Reset the model state
+```javascript
+.predict(temperature, ?callback)
+```
+
+> Feed a string of characters to the model state.
+
+`predict` - Predict the next character based on the model's current state.
+
+`callback` - Optional. A function to be called when the model finished adding the seed. If no callback is provided, it will return a promise that will be resolved once the prediction has been generated.
+
+```javascript
+.reset()
+```
+
+> Reset the model state
 
 ## Source
 

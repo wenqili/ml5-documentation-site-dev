@@ -68,6 +68,7 @@ ModelPageTemplate.propTypes = {
 
 const ModelPage = ({ data }) => {
   const { markdownRemark: post } = data;
+  console.log(post.frontmatter.title);
 
   return (
     <Layout>
@@ -77,7 +78,7 @@ const ModelPage = ({ data }) => {
             <div>
               <span className="Sidebar__title">Model</span>
             </div>
-            <ModelList />
+            <ModelList active="{post.frontmatter.title}" />
           </section>
           <ModelPageTemplate
             content={post.html}
