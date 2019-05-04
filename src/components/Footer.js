@@ -83,7 +83,7 @@ const Footer = class extends React.Component {
                 </li>
                 <li>
                   <Link className="Footer__item" to="/blog">
-                    Tutorial
+                    Tutorials
                   </Link>
                 </li>
               </ul>

@@ -11,7 +11,6 @@ export const HomePageTemplate = ({
   image,
   title,
   heading,
-  subheading,
   mainpitch,
   description,
   intro,
@@ -59,23 +58,15 @@ export const HomePageTemplate = ({
     </div>
     <section className="home__section section section--gradient">
       <div className="container">
-        <div className="">
+        <div className="flexContainer--center">
+          <Link className="Button btn" to="/start">
+            Get started with ml5.js
+          </Link>
+        </div>
+        <div className="flexContainer">
           <div className="">
-            <div className="flexContainer--center">
-              <Link className="Button btn" to="/start">
-                Get started with ml5.js
-              </Link>
-            </div>
-            <div className="flexContainer">
-              <div className="">
-                <div className="">
-                  <h1 className="home__pitchTitle">{mainpitch.title}</h1>
-                  <p className="home__pitchDescription">
-                    {mainpitch.description}
-                  </p>
-                </div>
-              </div>
-            </div>
+            <h1 className="home__pitchTitle">{mainpitch.title}</h1>
+            <p className="home__pitchDescription">{mainpitch.description}</p>
           </div>
         </div>
       </div>
@@ -121,7 +112,6 @@ HomePageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   heading: PropTypes.string,
-  subheading: PropTypes.string,
   mainpitch: PropTypes.object,
   description: PropTypes.string,
   intro: PropTypes.shape({
@@ -140,7 +130,6 @@ const HomePage = ({ data }) => {
         image={frontmatter.image}
         title={frontmatter.title}
         heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
         mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
         intro={frontmatter.intro}
@@ -176,7 +165,7 @@ export const pageQuery = graphql`
           }
         }
         heading
-        subheading
+
         mainpitch {
           title
           description

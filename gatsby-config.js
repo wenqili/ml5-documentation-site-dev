@@ -8,13 +8,13 @@ module.exports = {
   },
   plugins: [
     `gatsby-transformer-documentationjs`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `docs`,
-        path: `${__dirname}/../docs`
-      }
-    },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `docs`,
+    //     path: `${__dirname}/../docs`
+    //   }
+    // },
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sass",
     {

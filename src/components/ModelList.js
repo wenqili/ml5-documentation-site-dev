@@ -7,7 +7,7 @@ class ModelList extends React.Component {
   render() {
     const { data } = this.props;
     const { edges: models } = data.allMarkdownRemark;
-    console.log(this.props);
+
     return (
       <ul className="">
         {models &&
@@ -62,8 +62,6 @@ export default () => (
         }
       }
     `}
-    render={(data, count) => (
-      <ModelList active="10" data={data} count={count} />
-    )}
+    render={(data, count) => <ModelList data={data} count={count} />}
   />
 );

@@ -1,20 +1,20 @@
 ---
 templateKey: home-page
 title: Friendly Machine Learning for the Web.
+description: >-
+  The library is supported by code examples, tutorials, and sample datasets with an emphasis on ethical computing.
+  Bias in data, stereotypical harms, and responsible crowdsourcing are part of the documentation around data collection
+  and usage.
+
 image: /img/itay-banner.jpg
 heading: Let’s read a story!Discover how Itay Niv created a story-telling app for children!
-subheading: "This is sub-heading for home page"
+
 mainpitch:
   title: Why ml5.js?
   description: >
     ml5.js aims to make machine learning approachable for a broad audience of artists,
     creative coders, and students. The library provides access to machine learning algorithms
     and models in the browser, building on top of TensorFlow.js with no other external dependencies.
-
-description: >-
-  The library is supported by code examples, tutorials, and sample datasets with an emphasis on ethical computing.
-  Bias in data, stereotypical harms, and responsible crowdsourcing are part of the documentation around data collection
-  and usage.
 
 intro:
   blurbs:
@@ -70,24 +70,6 @@ model:
     java’s origin and support the farmers that grew it. We take coffee
     production, roasting and brewing seriously and we’re glad to pass that
     knowledge to anyone. This is an edit via identity...
-
-# main:
-#   heading: Discover these awesome learning models!
-#   description: >
-#     place holder!
-#   blurbs:
-#     - image: /img/products-grid3.jpg
-#     text: >
-#       PoseNet is a machine learning model that allows for Real-time Human Pose Estimation.
-#     - image: /img/products-grid3.jpg
-#     text: >
-#       PoseNet is a machine learning model that allows for Real-time Human Pose Estimation.
-#     - image: /img/products-grid3.jpg
-#     text: >
-#       PoseNet is a machine learning model that allows for Real-time Human Pose Estimation.
-#     - image: /img/products-grid3.jpg
-#     text: >
-#       PoseNet is a machine learning model that allows for Real-time Human Pose Estimation.
 
 team:
   heading: Meet our team!

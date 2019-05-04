@@ -57,7 +57,13 @@ const Navbar = class extends React.Component {
           </div>
           <div className="Navbar__tagline">
             <span className="navbar-item">
-              🌟Friendly machine learning for the web!🌟
+              <span role="img" aria-label="star">
+                🌟
+              </span>
+              Friendly machine learning for the web!
+              <span role="img" aria-label="star">
+                🌟
+              </span>
             </span>
           </div>
           <div
@@ -68,7 +74,7 @@ const Navbar = class extends React.Component {
               <Link className="navbar-item" to="/start">
                 Getting Started
               </Link>
-              <Link className="navbar-item" to="/reference/api-Pix2Pix/">
+              <Link className="navbar-item" to="/reference/">
                 Reference
               </Link>
               <Link className="navbar-item" to="/community">
