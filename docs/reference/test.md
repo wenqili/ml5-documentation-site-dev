@@ -1,24 +1,82 @@
 ---
 templateKey: "model-page"
-id: CharRNN
+id: test
 title: test()
-date: 2017-01-04T15:04:10.000Z
-featuredpost: true
-description: >-
-  RNN and [LSTMs](https://colah.github.io/posts/2015-08-Understanding-LSTMs/) (Long Short Term Memory networks) are a type of Neural Network architecture useful for working with sequential data (like characters in text or the musical notes of a song) where the order of the that sequence matters. This class allows you run a model pre-trained on a body of text to generate new text.
-
-  You can train your own models [using this tutorial](/docs/training-lstm) or use [this set of pre trained models](https://github.com/ml5js/ml5-data-and-training/tree/master/models/lstm).
-
 tags:
   - image
   - video
   - text
   - sound
+
+description: >-
+  RNN and [LSTMs](https://colah.github.io/posts/2015-08-Understanding-LSTMs/) (Long Short Term Memory networks) are a type of Neural Network architecture useful for working with sequential data (like characters in text or the musical notes of a song) where the order of the that sequence matters. This class allows you run a model pre-trained on a body of text to generate new text.
+
+
+  You can train your own models [using this tutorial](/docs/training-lstm) or use [this set of pre trained models](https://github.com/ml5js/ml5-data-and-training/tree/master/models/lstm).
+
+examples:
+  - demo: >-
+      <div class="example">
+      <img src="/assets/img/bird.jpg" id="targetImage" width=400/>
+      <p id="status">Loading Model...</p>
+      <p>The MobileNet model labeled this as <span id="result">...</span>, with a confidence of <span id="probability">...</span>.</p>
+      </div>
+    code: >-
+      const video = document.getElementById("video");
+
+      // Create a YOLO method
+      const yolo = ml5.YOLO(video, modelLoaded);
+
+      // When the model is loaded
+      function modelLoaded() {
+        console.log("Model Loaded!");
+      }
+
+      // Detect objects in the video element
+      yolo.detect(function(err, results) {
+        console.log(results); // Will output bounding boxes of detected objects
+      });
+  - demo: >-
+      const video = document.getElementById("video");
+
+      // Create a YOLO method
+      const yolo = ml5.YOLO(video, modelLoaded);
+
+      // When the model is loaded
+      function modelLoaded() {
+        console.log("Model Loaded!");
+      }
+
+      // Detect objects in the video element
+      yolo.detect(function(err, results) {
+        console.log(results); // Will output bounding boxes of detected objects
+      });
+    code: >-
+      const video = document.getElementById("video");
+
+      // Create a YOLO method
+      const yolo = ml5.YOLO(video, modelLoaded);
+
+      // When the model is loaded
+      function modelLoaded() {
+        console.log("Model Loaded!");
+      }
+
+      // Detect objects in the video element
+      yolo.detect(function(err, results) {
+        console.log(results); // Will output bounding boxes of detected objects
+      });
 ---
+
+<div class="example">
+  <img src="/assets/img/bird.jpg" id="targetImage" width=400/>
+  <p id="status">Loading Model...</p>
+  <p>The MobileNet model labeled this as <span id="result">...</span>, with a confidence of <span id="probability">...</span>.</p>
+</div>
 
 ## Example
 
-```javascript
+```
 // Create the character level generator with a pre trained model
 const rnn = ml5.charRNN("models/bolaño/", modelLoaded);
 

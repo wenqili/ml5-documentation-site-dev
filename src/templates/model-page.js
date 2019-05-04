@@ -8,13 +8,15 @@ import Content, { HTMLContent } from "../components/Content";
 import ModelList from "../components/ModelList";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
-
+import MarkdownContent from "../components/MarkdownContent";
+import Highlight from "react-highlight.js";
 export const ModelPageTemplate = ({
   content,
   contentComponent,
   description,
   tags,
   title,
+  examples,
   helmet
 }) => {
   const PostContent = contentComponent || Content;
@@ -39,8 +41,7 @@ export const ModelPageTemplate = ({
                 </span>
               ) : null}
             </h1>
-            <p>{description}</p>
-
+            <MarkdownContent content={description} />
             <Tabs>
               <TabList>
                 <Tab>Documentation</Tab>
@@ -56,6 +57,27 @@ export const ModelPageTemplate = ({
 
               <TabPanel>
                 <h2>Examples</h2>
+                {/* <MarkdownContent content={example} />
+                <pre className="language-javascript">
+                  <code
+                    className="language-javascript"
+                    dangerouslySetInnerHTML={{
+                      __html: example
+                    }}
+                  />
+                </pre> */}
+                {examples.map(example => (
+                  <div>
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: example.demo
+                      }}
+                    />
+                    <MarkdownContent content={example.demo} />
+                    <script>console.log("XXX")</script>
+                    <Highlight language="javascript">{example.code}</Highlight>
+                  </div>
+                ))}
               </TabPanel>
 
               <TabPanel>
@@ -83,7 +105,6 @@ ModelPageTemplate.propTypes = {
 
 const ModelPage = ({ data }) => {
   const { markdownRemark: post } = data;
-  console.log(post.frontmatter.title);
 
   return (
     <Layout>
@@ -108,10 +129,15 @@ const ModelPage = ({ data }) => {
                   name="description"
                   content={`${post.frontmatter.description}`}
                 />
+                <link
+                  rel="stylesheet"
+                  href="https://highlightjs.org/static/demo/styles/solarized-light.css"
+                />
               </Helmet>
             }
             tags={post.frontmatter.tags}
             title={post.frontmatter.title}
+            examples={post.frontmatter.examples}
           />
         </div>
       </section>
@@ -137,6 +163,10 @@ export const pageQuery = graphql`
         title
         description
         tags
+        examples {
+          demo
+          code
+        }
       }
     }
   }
