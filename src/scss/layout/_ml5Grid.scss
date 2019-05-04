@@ -1,0 +1,36 @@
+.ml5Grid__wrapper {
+  padding: $gutter;
+}
+
+.ml5Grid__container {
+  display: grid;
+  grid-gap: 24px;
+  grid-template-columns: 200px minmax(500px, 1fr);
+}
+
+.ml5Grid__content {
+  grid-column: 2;
+  grid-row: 1;
+  padding: $gutter;
+  max-width: 960px;
+  width: 100%;
+  margin: auto;
+  margin-top: 0;
+}
+
+.ml5Grid__sidebar {
+  position: sticky;
+  overflow-y: auto;
+  height: calc(100vh - 3.25rem - #{$gutter});
+  top: calc(3.25rem + #{$gutter});
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.ml5Grid__sidebarTitle {
+  font-size: $font-size-4;
+  color: $secondary-color;
+  font-weight: $weight-medium;
+  line-height: 38px;
+  padding-left: 0.75rem;
+}

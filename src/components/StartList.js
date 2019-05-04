@@ -14,7 +14,11 @@ class StartList extends React.Component {
           models.map(({ node: model }) => (
             <li className="ModelList__item" key={model.id}>
               <div className="ModelList__title">
-                <Link className="" to={model.fields.slug}>
+                <Link
+                  className=""
+                  to={model.fields.slug}
+                  activeClassName="ModelList__link--active"
+                >
                   {model.frontmatter.sidebar_label}
                 </Link>
               </div>

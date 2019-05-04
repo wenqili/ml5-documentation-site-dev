@@ -6,6 +6,8 @@ import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import ModelList from "../components/ModelList";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import "react-tabs/style/react-tabs.css";
 
 export const ModelPageTemplate = ({
   content,
@@ -18,7 +20,7 @@ export const ModelPageTemplate = ({
   const PostContent = contentComponent || Content;
 
   return (
-    <article className="Section">
+    <article className="ml5Grid__content">
       {helmet || ""}
       <div className="">
         <div className="">
@@ -38,19 +40,32 @@ export const ModelPageTemplate = ({
               ) : null}
             </h1>
             <p>{description}</p>
-            <PostContent content={content} />
-            {/* {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className="taglist">
-                  {tags.map(tag => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null} */}
+
+            <Tabs>
+              <TabList>
+                <Tab>Documentation</Tab>
+                <Tab>Examples</Tab>
+                <Tab>Tutorial</Tab>
+                <Tab>Advanced</Tab>
+              </TabList>
+
+              <TabPanel>
+                <h2>Documentation</h2>
+                <PostContent content={content} />
+              </TabPanel>
+
+              <TabPanel>
+                <h2>Examples</h2>
+              </TabPanel>
+
+              <TabPanel>
+                <h2>Tutorial</h2>
+              </TabPanel>
+
+              <TabPanel>
+                <h2>Advanced</h2>
+              </TabPanel>
+            </Tabs>
           </div>
         </div>
       </div>
@@ -72,13 +87,15 @@ const ModelPage = ({ data }) => {
 
   return (
     <Layout>
-      <section className="">
-        <div className="flexContainer">
-          <section className="Sidebar">
-            <div>
-              <span className="Sidebar__title">Model</span>
+      <section className="ml5Grid__wrapper">
+        <div className="ml5Grid__container">
+          <section className="ml5Grid__sidebar">
+            <div className="Sidebar__container">
+              <div>
+                <span className="ml5Grid__sidebarTitle">Models</span>
+              </div>
+              <ModelList />
             </div>
-            <ModelList active="{post.frontmatter.title}" />
           </section>
           <ModelPageTemplate
             content={post.html}

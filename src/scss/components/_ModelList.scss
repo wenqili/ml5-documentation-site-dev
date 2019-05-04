@@ -2,21 +2,26 @@
 }
 
 .ModelList__item {
-  // padding-top: 12px;
-  // padding-bottom: 12px;
 }
 
 .ModelList__title {
   font-size: $font-size-4;
-  line-height: 38px;
-  // padding-left: 24px;
-  // padding-right: 8px;
-  // padding-top: 4px;
-  // padding-bottom: 4px;
+  color: $secondary-font-color;
+  line-height: 2em;
+  padding-left: 0.75rem;
+
+  a {
+    transition: color 0.3s;
+    color: $secondary-font-color;
+  }
+
+  a:hover {
+    color: $blue;
+  }
 }
 
 .ModelList__link {
   &--active {
-    color: $purple;
+    color: $purple !important;
   }
 }

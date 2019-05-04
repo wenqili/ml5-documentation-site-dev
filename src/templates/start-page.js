@@ -6,6 +6,8 @@ import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import StartList from "../components/StartList";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import "react-tabs/style/react-tabs.css";
 
 export const StartPageTemplate = ({
   content,
@@ -18,41 +20,25 @@ export const StartPageTemplate = ({
   const PostContent = contentComponent || Content;
 
   return (
-    <article className="Section">
+    <article className="ml5Grid__content">
       {helmet || ""}
       <div className="">
-        <div className="">
-          <div className="">
-            <h1 className="">
-              {title}
-              {tags && tags.length ? (
-                <span className="TagList__wrapper">
-                  <ul className="TagList">
-                    {tags.map(tag => (
-                      <li key={tag + `tag`} className={`TagList__` + tag}>
-                        <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                      </li>
-                    ))}
-                  </ul>
-                </span>
-              ) : null}
-            </h1>
-            <p>{description}</p>
-            <PostContent content={content} />
-            {/* {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className="taglist">
-                  {tags.map(tag => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null} */}
-          </div>
-        </div>
+        <h1 className="">
+          {title}
+          {tags && tags.length ? (
+            <span className="TagList__wrapper">
+              <ul className="TagList">
+                {tags.map(tag => (
+                  <li key={tag + `tag`} className={`TagList__` + tag}>
+                    <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                  </li>
+                ))}
+              </ul>
+            </span>
+          ) : null}
+        </h1>
+        <p>{description}</p>
+        <PostContent content={content} />
       </div>
     </article>
   );
@@ -71,14 +57,15 @@ const StartPage = ({ data }) => {
 
   return (
     <Layout>
-      <section className="">
-        <div className="flexContainer">
-          <section className="Sidebar">
-            <div>
-              <span className="Sidebar__title">Getting Started</span>
-            </div>
-            <StartList />
-          </section>
+      <section className="Sidebar">
+        <div>
+          <span className="Sidebar__title">Getting Started</span>
+        </div>
+        <StartList />
+      </section>
+
+      <section className="ml5Grid__wrapper">
+        <div className="ml5Grid__container">
           <StartPageTemplate
             content={post.html}
             contentComponent={HTMLContent}

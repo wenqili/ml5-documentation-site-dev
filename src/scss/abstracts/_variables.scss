@@ -4,8 +4,8 @@ $purple: #a256ff;
 $green: #0ace81;
 $primary-color: $blue;
 $secondary-color: $purple;
-$primary-font-color: #000000;
-$secondary-font-color: #929494;
+$primary-font-color: #000000 !default;
+$secondary-font-color: #4e4e4e !default;
 
 // Typography
 /// Brand font
@@ -16,7 +16,7 @@ $monospace-font-family: monospace !default;
 $font-size-1: 36px; // for model name on model page
 $font-size-2: 30px; // for tab
 $font-size-3: 16px; // for documentation title
-$font-size-4: 20px; // for sidebar list item
+$font-size-4: 16px; // Sidebar list items
 $font-size-5: 12px; // tag
 $font-size-6: 3rem;
 
@@ -47,4 +47,4 @@ $mobile: $tablet - 1px !default;
 
 ///layout variables
 $sidebar-width: 200px;
-$gutter: 0.75rem;
+$gutter: 1.5rem;

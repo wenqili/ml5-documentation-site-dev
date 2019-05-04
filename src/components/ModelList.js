@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql, StaticQuery } from "gatsby";
-// import PreviewCompatibleImage from "./PreviewCompatibleImage";
 
 class ModelList extends React.Component {
   render() {
@@ -9,7 +8,7 @@ class ModelList extends React.Component {
     const { edges: models } = data.allMarkdownRemark;
 
     return (
-      <ul className="">
+      <ul className="ModelList">
         {models &&
           models.map(({ node: model }) => (
             <li className="ModelList__item" key={model.id}>
