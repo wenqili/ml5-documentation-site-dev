@@ -5,7 +5,8 @@
 @import "./base/base", "./base/font", "./base/typography";
 
 @import "./layout/Navbar", "./layout/Sidebar", "./layout/wrapper",
-  "./layout/flexContainer", "./layout/Section", "./layout/Footer";
+  "./layout/flexContainer", "./layout/Section", "./layout/Footer",
+  "./layout/Container";
 
 @import "./components/ModelList", "./components/TagList", "./components/Post",
   "./components/Button";

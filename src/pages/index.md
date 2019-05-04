@@ -39,7 +39,16 @@ version:
   heading: Build tools using easy classification systems with tons of **pre trained models**!
   recent: "Current version: 0.71   Last update: 24 April, 2019"
   snippet: >
-    <div>?</div>
+    const pix2pix = ml5.pix2pix('models/customModel.pict', modelLoaded);
+
+    function modelLoaded() {
+      console.log('Model Loaded!');
+    }
+
+    // Transfer using a canvas
+    pix2pix.transfer(canvas, function(err, result) {
+      console.log(result);
+    });
 
 model:
   blurbs:
@@ -85,3 +94,21 @@ team:
   image: /img/joey.png
   profile: Joey Lee is a New York based designer, creative technologist, and geographer who leads the development of ml5.js by creating new examples, maintaining the library, doing code reviews, addressing issues, and merging/communicating with contributors.
 ---
+
+### Build tools using easy classification systems with tons of **pre trained models**!
+
+Current version: 0.71
+Last update: 24 April, 2019
+
+```javascript
+const pix2pix = ml5.pix2pix("models/customModel.pict", modelLoaded);
+
+function modelLoaded() {
+  console.log("Model Loaded!");
+}
+
+// Transfer using a canvas
+pix2pix.transfer(canvas, function(err, result) {
+  console.log(result);
+});
+```

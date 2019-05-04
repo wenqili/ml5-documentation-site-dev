@@ -7,6 +7,7 @@ import Layout from "../components/Layout";
 import Features from "../components/Features";
 
 export const HomePageTemplate = ({
+  content,
   image,
   title,
   heading,
@@ -60,44 +61,56 @@ export const HomePageTemplate = ({
       <div className="container">
         <div className="">
           <div className="">
-            <div className="column is-12 has-text-centered">
+            <div className="flexContainer--center">
               <Link className="Button btn" to="/start">
                 Get started with ml5.js
               </Link>
             </div>
-            <div className="column is-12">
+            <div className="flexContainer">
               <div className="">
                 <div className="">
-                  <div className="">
-                    <h1 className="home__pitchTitle">{mainpitch.title}</h1>
-                  </div>
-                  <div className="">
-                    <p className="home__pitchDescription">
-                      {mainpitch.description}
-                    </p>
-                  </div>
-                </div>
-
-                <Features gridItems={intro.blurbs} />
-                <h3>{version.heading}</h3>
-                <h4>{version.recent}</h4>
-                <pre class="language-javascript">
-                  <code class="language-javascript">{version.snippet}</code>
-                </pre>
-                <h3>{model.heading}</h3>
-
-                <Features gridItems={model.blurbs} />
-
-                <div className="columns">
-                  <h3>{team.heading}</h3>
-                  <div className="home__teamHeadshot">
-                    <PreviewCompatibleImage imageInfo={team} />
-                  </div>
-                  <p>{team.profile}</p>
+                  <h1 className="home__pitchTitle">{mainpitch.title}</h1>
+                  <p className="home__pitchDescription">
+                    {mainpitch.description}
+                  </p>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+    <section className="home__blurb">
+      <div className="flexContainer flexContainer--homeblurb">
+        <Features gridItems={intro.blurbs} />
+      </div>
+    </section>
+
+    <section className="home__update">
+      <div className="flexContainer flexContainer--homeUpdate">
+        <div
+          dangerouslySetInnerHTML={{
+            __html: content
+          }}
+        />
+      </div>
+    </section>
+
+    <section className="home__model">
+      <div className="flexContainer flexContainer--homeUpdate">
+        <h3>{model.heading}</h3>
+        <Features gridItems={model.blurbs} />
+      </div>
+    </section>
+
+    <section className="home__team">
+      <div className="flexContainer flexContainer--hometeam">
+        <h3>{team.heading}</h3>
+        <div className="home__teamWrapper">
+          <div className="home__teamHeadshot">
+            <PreviewCompatibleImage imageInfo={team} />
+          </div>
+          <p>{team.profile}</p>
         </div>
       </div>
     </section>
@@ -118,10 +131,12 @@ HomePageTemplate.propTypes = {
 
 const HomePage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
+  const content = data.markdownRemark.html;
 
   return (
     <Layout>
       <HomePageTemplate
+        content={content}
         image={frontmatter.image}
         title={frontmatter.title}
         heading={frontmatter.heading}
@@ -150,6 +165,7 @@ export default HomePage;
 export const pageQuery = graphql`
   query HomePageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "home-page" } }) {
+      html
       frontmatter {
         title
         image {
