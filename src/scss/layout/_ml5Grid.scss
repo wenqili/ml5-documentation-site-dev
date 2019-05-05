@@ -58,12 +58,14 @@
 }
 
 .ml5Grid__itplogo {
-  max-width: 200px;
   grid-column: 1;
   grid-row: 1;
   align-self: center;
   justify-self: center;
-  padding: 0 3.5rem;
+
+  img {
+    width: 70px;
+  }
 }
 
 .ml5Grid__postWrapper {

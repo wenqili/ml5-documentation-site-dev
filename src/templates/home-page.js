@@ -46,7 +46,7 @@ export const HomePageTemplate = ({
     </section>
 
     <section className="home__container home__gridContainer">
-      <div className="home__gridItem--10out12">
+      <div className="home__gridItem--10out12 home__blurbs">
         <Features gridItems={intro.blurbs} />
       </div>
     </section>

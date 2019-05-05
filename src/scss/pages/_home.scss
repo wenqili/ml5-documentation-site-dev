@@ -77,7 +77,13 @@
   width: 100%;
 }
 
+.home__blurbs {
+  padding: calc(#{$gutter} * 2) $gutter;
+}
+
 .home__model {
+  padding: calc(#{$gutter} * 2) $gutter;
+
   h2 {
     color: #333333;
     font-size: $font-size-1;
@@ -88,7 +94,7 @@
 .home__update {
   background-color: $green;
   text-align: center;
-  padding: $gutter;
+  padding: calc(#{$gutter} * 2) $gutter;
   h2 {
     color: whitesmoke;
     font-size: $font-size-1;
@@ -106,12 +112,13 @@
 
 .home__team {
   background-color: $purple;
-  padding: $gutter $gutter calc(#{$gutter * 2}) $gutter;
+  padding: calc(#{$gutter} * 2) $gutter;
 
   h2 {
     color: whitesmoke;
     font-size: $font-size-1;
     padding: 0 $gutter;
+    margin-top: 0;
   }
 
   p {

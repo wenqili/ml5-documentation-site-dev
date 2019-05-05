@@ -13,11 +13,7 @@ $Navbar-breakpoint: $tablet !default;
 
   background-color: $Navbar-background-color;
 
-  // container inside Navbar
-  // & > .container {
-  //   display: flex;
-  //   width: 100%;
-  // }
+  z-index: 10;
 }
 
 .Navbar__wrapper {
