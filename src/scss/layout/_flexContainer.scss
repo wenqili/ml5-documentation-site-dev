@@ -8,6 +8,10 @@
   grid-gap: $gutter;
   grid-auto-flow: column;
 
+  &--vertical {
+    grid-auto-flow: row;
+  }
+
   &--center {
     text-align: center;
   }

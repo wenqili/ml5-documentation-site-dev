@@ -10,7 +10,11 @@
   &--homePage {
     display: grid;
     grid-gap: 24px;
-    grid-template-rows: calc(100vh - 3.25rem) auto auto auto auto auto;
+    grid-template-rows: calc(100vh - #{$Navbar-height}) auto auto auto auto auto;
+  }
+
+  &--communityPage {
+    grid-template-columns: auto 1fr auto;
   }
 }
 
@@ -32,8 +36,8 @@
 .ml5Grid__sidebar {
   position: sticky;
   overflow-y: auto;
-  height: calc(100vh - 3.25rem - #{$gutter});
-  top: calc(3.25rem + #{$gutter});
+  height: calc(100vh - #{$Navbar-height} - #{$gutter});
+  top: calc(#{$Navbar-height} + #{$gutter});
   grid-column: 1;
   grid-row: 1;
 }

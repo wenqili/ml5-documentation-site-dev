@@ -7,12 +7,10 @@ export default class BlogIndexPage extends React.Component {
   render() {
     return (
       <Layout>
-        <div className="container">
-          <h1>Community</h1>
-        </div>
-        <section className="section">
-          <div className="container">
-            <div className="content">
+        <section className="ml5Grid__wrapper">
+          <div className="ml5Grid__container ml5Grid__container--communityPage">
+            <div className="ml5Grid__content">
+              <h1>Community</h1>
               <BlogRoll />
             </div>
           </div>

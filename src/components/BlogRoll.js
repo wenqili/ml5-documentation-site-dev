@@ -9,7 +9,7 @@ class BlogRoll extends React.Component {
     const { edges: posts } = data.allMarkdownRemark;
 
     return (
-      <div className="">
+      <div className="GridContainer GridContainer--vertical">
         {posts &&
           posts.map(({ node: post }) => (
             <div className="Post" key={post.id}>
@@ -29,12 +29,12 @@ class BlogRoll extends React.Component {
                   </div>
                 ) : null}
                 <header className="Post__meta">
-                  <h3>
+                  <h2>
                     <Link className="Post__title" to={post.fields.slug}>
                       {post.frontmatter.title}
                     </Link>
-                  </h3>
-                  <h4>By {post.frontmatter.author}</h4>
+                  </h2>
+                  <h3 className="Post__author">By {post.frontmatter.author}</h3>
                   <p>
                     {post.excerpt}
                     <br />
@@ -46,11 +46,19 @@ class BlogRoll extends React.Component {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        {post.frontmatter.externalLink}
+                        Launch Experiments{" "}
+                        <span role="img" aria-tag="rocket">
+                          {" "}
+                          🚀
+                        </span>
                       </a>
                     ) : (
                       <Link className="Post__link" to={post.fields.slug}>
                         Keep Reading
+                        <span role="img" aria-tag="reading">
+                          {" "}
+                          👓
+                        </span>
                       </Link>
                     )}
                   </p>
