@@ -40,8 +40,8 @@ const Navbar = class extends React.Component {
         aria-label="main-navigation"
       >
         <div className="Navbar__wrapper">
-          <div className="Navbar__brand navbar-brand">
-            <Link to="/" className="Navbar-item navbar-item" title="Logo">
+          <div className="Navbar__brand">
+            <Link to="/" className="Navbar__item" title="Logo">
               <img src={logo} alt="ml5.js logo" />
             </Link>
             {/* Hamburger menu */}
@@ -56,7 +56,7 @@ const Navbar = class extends React.Component {
             </div>
           </div>
           <div className="Navbar__tagline">
-            <span className="Navbar__item navbar-item">
+            <span className="Navbar__item">
               <span role="img" aria-label="star">
                 🌟
               </span>
@@ -71,16 +71,16 @@ const Navbar = class extends React.Component {
             className={`Navbar__menu ${this.state.navBarActiveClass}`}
           >
             <div className="Navbar__itemContainer">
-              <Link className="Navbar__item navbar-item" to="/start">
+              <Link className="Navbar__item" to="/start">
                 Getting Started
               </Link>
-              <Link className="Navbar__item navbar-item" to="/reference/">
+              <Link className="Navbar__item" to="/reference/">
                 Reference
               </Link>
-              <Link className="Navbar__item navbar-item" to="/community">
+              <Link className="Navbar__item" to="/community">
                 Community
               </Link>
-              <Link className="Navbar__item navbar-item" to="/about">
+              <Link className="Navbar__item" to="/about">
                 About
               </Link>
 
@@ -93,7 +93,7 @@ const Navbar = class extends React.Component {
             </div>
             <div className="Navbar__itemContainer">
               <a
-                className="navbar-item"
+                className="Navbar__item"
                 href="https://github.com/ml5js/ml5-library"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -105,7 +105,7 @@ const Navbar = class extends React.Component {
             </div>
 
             <div className="Navbar__itemContainer">
-              <form className="navbar-item">
+              <form className="Navbar__item">
                 <input type="text" name="search" value="search placeholder" />
               </form>
             </div>
