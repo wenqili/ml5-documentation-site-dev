@@ -61,6 +61,12 @@ $Navbar-breakpoint: $tablet !default;
   align-items: stretch;
 }
 
+.Navbar__item {
+  font-size: $font-size-4;
+  font-weight: $weight-medium;
+  color: #000000;
+}
+
 //temporary overwrite
 .navbar-burger {
   @include tablet-up() {

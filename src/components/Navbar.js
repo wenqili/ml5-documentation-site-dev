@@ -41,7 +41,7 @@ const Navbar = class extends React.Component {
       >
         <div className="Navbar__wrapper">
           <div className="Navbar__brand navbar-brand">
-            <Link to="/" className="navbar-item" title="Logo">
+            <Link to="/" className="Navbar-item navbar-item" title="Logo">
               <img src={logo} alt="ml5.js logo" />
             </Link>
             {/* Hamburger menu */}
@@ -56,7 +56,7 @@ const Navbar = class extends React.Component {
             </div>
           </div>
           <div className="Navbar__tagline">
-            <span className="navbar-item">
+            <span className="Navbar__item navbar-item">
               <span role="img" aria-label="star">
                 🌟
               </span>
@@ -71,16 +71,16 @@ const Navbar = class extends React.Component {
             className={`Navbar__menu ${this.state.navBarActiveClass}`}
           >
             <div className="Navbar__itemContainer">
-              <Link className="navbar-item" to="/start">
+              <Link className="Navbar__item navbar-item" to="/start">
                 Getting Started
               </Link>
-              <Link className="navbar-item" to="/reference/">
+              <Link className="Navbar__item navbar-item" to="/reference/">
                 Reference
               </Link>
-              <Link className="navbar-item" to="/community">
+              <Link className="Navbar__item navbar-item" to="/community">
                 Community
               </Link>
-              <Link className="navbar-item" to="/about">
+              <Link className="Navbar__item navbar-item" to="/about">
                 About
               </Link>
 

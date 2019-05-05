@@ -57,15 +57,16 @@ const StartPage = ({ data }) => {
 
   return (
     <Layout>
-      <section className="Sidebar">
-        <div>
-          <span className="Sidebar__title">Getting Started</span>
-        </div>
-        <StartList />
-      </section>
-
       <section className="ml5Grid__wrapper">
         <div className="ml5Grid__container">
+          <section className="ml5Grid__sidebar">
+            <div className="Sidebar__container">
+              <div>
+                <span className="ml5Grid__sidebarTitle">Getting Started</span>
+              </div>
+            </div>
+            <StartList />
+          </section>
           <StartPageTemplate
             content={post.html}
             contentComponent={HTMLContent}

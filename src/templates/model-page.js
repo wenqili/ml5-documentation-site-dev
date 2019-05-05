@@ -24,39 +24,37 @@ export const ModelPageTemplate = ({
     <article className="ml5Grid__content">
       {helmet || ""}
       <div className="">
-        <div className="">
-          <div className="">
-            <h1 className="">
-              {title}
-              {tags && tags.length ? (
-                <span className="TagList__wrapper">
-                  <ul className="TagList">
-                    {tags.map(tag => (
-                      <li key={tag + `tag`} className={`TagList__` + tag}>
-                        <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                      </li>
-                    ))}
-                  </ul>
-                </span>
-              ) : null}
-            </h1>
-            <MarkdownContent content={description} />
-            <Tabs>
-              <TabList>
-                <Tab>documentation</Tab>
-                <Tab>examples</Tab>
-                <Tab>tutorial</Tab>
-                <Tab>advanced</Tab>
-              </TabList>
+        <h1 className="">
+          {title}
+          {tags && tags.length ? (
+            <span className="TagList__wrapper">
+              <ul className="TagList">
+                {tags.map(tag => (
+                  <li key={tag + `tag`} className={`TagList__` + tag}>
+                    <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                  </li>
+                ))}
+              </ul>
+            </span>
+          ) : null}
+        </h1>
+        <MarkdownContent content={description} />
+        <Tabs>
+          <TabList>
+            <Tab>documentation</Tab>
+            <Tab>examples</Tab>
+            <Tab>tutorial</Tab>
+            <Tab>advanced</Tab>
+          </TabList>
 
-              <TabPanel>
-                {/* <h2>Documentation</h2> */}
-                <PostContent content={content} />
-              </TabPanel>
+          <TabPanel>
+            {/* <h2>Documentation</h2> */}
+            <PostContent className="ml5Grid__postWrapper" content={content} />
+          </TabPanel>
 
-              <TabPanel>
-                <h2>Examples</h2>
-                {/* <MarkdownContent content={example} />
+          <TabPanel>
+            <h2>Examples</h2>
+            {/* <MarkdownContent content={example} />
                 <pre className="language-javascript">
                   <code
                     className="language-javascript"
@@ -65,34 +63,30 @@ export const ModelPageTemplate = ({
                     }}
                   />
                 </pre> */}
-                {examples
-                  ? examples.map(example => (
-                      <div key="">
-                        <div
-                          dangerouslySetInnerHTML={{
-                            __html: example.demo
-                          }}
-                        />
-                        <MarkdownContent content={example.demo} />
-                        <script>console.log("XXX")</script>
-                        <Highlight language="javascript">
-                          {example.code}
-                        </Highlight>
-                      </div>
-                    ))
-                  : null}
-              </TabPanel>
+            {examples
+              ? examples.map(example => (
+                  <div key="">
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: example.demo
+                      }}
+                    />
+                    <MarkdownContent content={example.demo} />
+                    <script>console.log("XXX")</script>
+                    <Highlight language="javascript">{example.code}</Highlight>
+                  </div>
+                ))
+              : null}
+          </TabPanel>
 
-              <TabPanel>
-                <h2>Tutorial</h2>
-              </TabPanel>
+          <TabPanel>
+            <h2>Tutorial</h2>
+          </TabPanel>
 
-              <TabPanel>
-                <h2>Advanced</h2>
-              </TabPanel>
-            </Tabs>
-          </div>
-        </div>
+          <TabPanel>
+            <h2>Advanced</h2>
+          </TabPanel>
+        </Tabs>
       </div>
     </article>
   );

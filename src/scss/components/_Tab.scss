@@ -1,4 +1,4 @@
-$border-width: 2px;
+$border-width: 1px;
 
 .react-tabs {
   -webkit-tap-highlight-color: transparent;
@@ -6,10 +6,9 @@ $border-width: 2px;
 
 .react-tabs__tab-list {
   border-bottom: $border-width solid $blue !important;
-  margin: 0 0 $gutter !important;
-  padding: 0;
-  color: $blue;
-  font-weight: 500;
+  margin: calc(2 * #{$gutter}) 0 $gutter 0 !important;
+  padding: 0 $gutter 0 $gutter !important;
+  color: $secondary-font-color;
 }
 
 .react-tabs__tab {
@@ -19,15 +18,20 @@ $border-width: 2px;
   bottom: calc(-1 * #{$border-width}) !important;
   position: relative;
   list-style: none;
+  font-size: $font-size-2 !important;
+  line-height: 1.2em;
   padding: 6px 12px;
+  width: 25%;
+  text-align: center;
   cursor: pointer;
 }
 
 .react-tabs__tab--selected {
-  color: white !important;
+  color: $blue !important;
   border-color: $blue !important;
-  background-color: $blue !important;
+  // background-color: $blue !important;
   border-radius: 5px 5px 0 0;
+  font-weight: 500;
 }
 
 .react-tabs__tab--disabled {

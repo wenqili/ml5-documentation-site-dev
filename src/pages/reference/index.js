@@ -7,16 +7,24 @@ export default class ReferenceIndexPage extends React.Component {
   render() {
     return (
       <Layout>
-        <div className="flexContainer">
-          <aside className="Sidebar" />
-
-          <article className="Section">
-            <h1>Reference</h1>
-            <div className="reference__wrapper">
-              <ModelList />
-            </div>
-          </article>
-        </div>
+        <section className="ml5Grid__wrapper">
+          <div className="ml5Grid__container">
+            <section className="ml5Grid__sidebar">
+              <div className="Sidebar__container">
+                <div>
+                  <span className="ml5Grid__sidebarTitle">Models</span>
+                </div>
+                <ModelList />
+              </div>
+            </section>
+            <article className="ml5Grid__content">
+              <h1>Reference</h1>
+              <div className="reference__wrapper">
+                <ModelList />
+              </div>
+            </article>
+          </div>
+        </section>
       </Layout>
     );
   }

@@ -7,5 +7,5 @@ import HomePagePreview from "./preview-templates/HomePagePreview";
 
 CMS.registerPreviewTemplate("index", HomePagePreview);
 CMS.registerPreviewTemplate("about", AboutPagePreview);
-CMS.registerPreviewTemplate("products", ProductPagePreview);
+// CMS.registerPreviewTemplate("products", ProductPagePreview);
 CMS.registerPreviewTemplate("blog", CommunityPostPreview);

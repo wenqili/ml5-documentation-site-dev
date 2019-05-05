@@ -16,6 +16,11 @@
   width: 100%;
   margin: auto;
   margin-top: 0;
+
+  &--footerlinks {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 .ml5Grid__sidebar {
@@ -33,4 +38,24 @@
   font-weight: $weight-bold;
   line-height: 38px;
   padding-left: 0.75rem;
+}
+
+.ml5Grid__footerContainer {
+  display: grid;
+  grid-gap: 24px;
+  width: 100%;
+  grid-template-columns: 200px 1fr;
+}
+
+.ml5Grid__itplogo {
+  max-width: 200px;
+  grid-column: 1;
+  grid-row: 1;
+  align-self: center;
+  justify-self: center;
+  padding: 0 3.5rem;
+}
+
+.ml5Grid__postWrapper {
+  padding: 0 $gutter 0 $gutter;
 }

@@ -28,17 +28,32 @@ h2 {
 
 h3 {
   font-size: $font-size-3;
-  font-weight: $weight-medium;
+  font-weight: $weight-bold;
+  margin-top: 2em;
+  // &:not(:first-child) {
+  //   margin-top: 2em;
+  // }
 }
 
 h4 {
   font-size: $font-size-4;
+  font-family: $monospace-font-family;
   font-weight: $weight-bold;
   margin: auto;
-  color: $green;
+  color: $purple;
+}
+
+h5 {
+  font-size: $font-size-5;
+  font-family: $monospace-font-family;
+  font-weight: $weight-bold;
+  margin: auto;
+  margin-bottom: 0.5em;
+  color: #6db51e;
 }
 
 p {
+  font-size: $font-size-paragraph;
   margin-bottom: 1em;
   &:last-child {
     margin-bottom: 2em;
@@ -46,20 +61,43 @@ p {
 }
 
 blockquote {
-  color: $secondary-font-color;
-  // background-color: rgba(255, 229, 100, 0.3);
-  padding: 15px 30px 15px 15px;
+  // background-color: #f8f5ff;
+  padding: 1.75rem;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
   border: 1px solid $blue;
   border-radius: 5px;
-  // border-left: 8px solid #ffe564;
 
-  p {
+  strong {
+    color: whitesmoke !important;
+    font-family: $monospace-font-family;
+    background-color: $purple;
+    padding: 5px !important;
+    margin: 0px 3px;
+    border-radius: 5px;
+  }
+
+  .gatsby-highlight {
+    margin: $gutter;
+  }
+
+  p:not(:last-child) {
+    margin-bottom: 1.5em;
+  }
+
+  p:last-child {
     margin-bottom: 1em;
   }
+
+  li {
+    margin-bottom: 0.5em;
+  }
+}
+
+code.language-javascript {
+  background-color: none !important;
 }
 
 ul {
@@ -68,10 +106,13 @@ ul {
 
 li {
   line-height: 2em;
+  font-size: $font-size-paragraph !important;
   code {
     display: inline;
     background-color: $purple !important;
     color: white !important;
     padding: 4px 7px !important;
+    margin: 0;
+    font-size: 16px !important;
   }
 }
