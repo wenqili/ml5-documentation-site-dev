@@ -1,8 +1,12 @@
-.flexContainer {
-  display: flex;
-  flex-grow: 0.5;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+.GridContainer {
+  // display: flex;
+  // flex-grow: 0.5;
+  // padding-left: 1.5rem;
+  // padding-right: 1.5rem;
+  // flex-wrap: wrap;
+  display: grid;
+  grid-gap: $gutter;
+  grid-auto-flow: column;
 
   &--center {
     text-align: center;
@@ -18,17 +22,12 @@
   &--hometeam {
     flex-direction: column;
     width: 50%;
-    padding: 60px;
     // margin: auto;
-  }
-
-  &--homeblurb {
-    width: 60%;
-    padding: 30px;
-    margin: auto;
   }
 }
 
-.flexContainer__item {
+.GridContainer__item {
   flex-grow: 1;
+  flex-basis: 0;
+  padding: 0 $gutter;
 }

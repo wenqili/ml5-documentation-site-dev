@@ -1,5 +1,4 @@
 $Navbar-background-color: white !default;
-$Navbar-height: 3.25rem !default;
 $Navbar-breakpoint: $tablet !default;
 
 .Navbar {
@@ -28,7 +27,7 @@ $Navbar-breakpoint: $tablet !default;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   // padding-bottom: 0.8rem;
-  height: 3.75rem;
+  height: $Navbar-height;
 }
 
 .Navbar__brand {

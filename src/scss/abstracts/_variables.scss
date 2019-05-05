@@ -20,7 +20,6 @@ $font-size-4: 16px; // Nav bar items, Sidebar list items, footer items
 $font-size-5: 16px; // code block
 $font-size-6: 10px; // tag
 $font-size-paragraph: 14px;
-
 $font-size-pitch: 18px;
 
 $weight-light: 300 !default;
@@ -47,5 +46,6 @@ $tablet: 769px !default;
 $mobile: $tablet - 1px !default;
 
 ///layout variables
+$Navbar-height: 3.75rem !default;
 $sidebar-width: 200px;
 $gutter: 1.5rem;

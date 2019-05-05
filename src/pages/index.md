@@ -21,10 +21,10 @@ intro:
     - image: /img/tenser_flow_figure.png
       text: >
         ml5.js is a friendly high level interface to TensorFlow.js, a library for handling GPU-accelerated mathematical operations and memory management for machine learning algorithms.
-    - image: /img/wrapper_figure.png
+    - image: /img/tenser_flow_figure.png
       text: >
         ml5.js provides immediate access in the browser to pre-trained models for detecting human poses, generating text, styling an image with another, composing music, pitch detection, and common English language word relationships.
-    - image: /img/unknown_figure.png
+    - image: /img/tenser_flow_figure.png
       text: >
         ml5.js is a friendly high level interface to TensorFlow.js, a library for handling GPU-accelerated
         mathematical operations and memory management for machine learning algorithms.
@@ -77,7 +77,7 @@ team:
   profile: Joey Lee is a New York based designer, creative technologist, and geographer who leads the development of ml5.js by creating new examples, maintaining the library, doing code reviews, addressing issues, and merging/communicating with contributors.
 ---
 
-### Build tools using easy classification systems with tons of **pre trained models**!
+## Build tools using easy classification systems with tons of **pre trained models**!
 
 Current version: 0.71
 Last update: 24 April, 2019

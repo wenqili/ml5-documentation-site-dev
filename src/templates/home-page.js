@@ -18,67 +18,41 @@ export const HomePageTemplate = ({
   model,
   team
 }) => (
-  <div>
-    <div
-      className="home__featuredImage full-width-image margin-top-0"
+  <div className="ml5Grid__container--homePage">
+    <section
+      className="home__featuredImage"
       style={{
         backgroundImage: `url(${
           !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
-        backgroundPosition: `top left`,
-        backgroundAttachment: `fixed`
+        })`
       }}
     >
       <div className="home__overlay" />
-      <div
-        style={{
-          display: "flex",
-          height: "150px",
-          lineHeight: "1",
-          justifyContent: "space-around",
-          alignItems: "left",
-          flexDirection: "column"
-        }}
-      >
-        <h1 className="home__featuredTitle">{heading}</h1>
-        {/* <h3
-          className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
-          style={{
-            boxShadow:
-              "rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px",
-            backgroundColor: "rgb(255, 68, 0)",
-            color: "white",
-            lineHeight: "1",
-            padding: "0.25em"
-          }}
-        >
-          {subheading}
-        </h3> */}
-      </div>
-    </div>
-    <section className="home__section section section--gradient">
-      <div className="container">
-        <div className="flexContainer--center">
-          <Link className="Button btn" to="/start">
+      <Link to="">
+        <h2 className="home__featuredTitle">{heading}</h2>
+      </Link>
+    </section>
+
+    <section className="home__container home__gridContainer">
+      <div className="home__gridItem--6out12">
+        <h2 className="Button__wrapper">
+          <Link className="Button" to="/start">
             Get started with ml5.js
           </Link>
-        </div>
-        <div className="flexContainer">
-          <div className="">
-            <h1 className="home__pitchTitle">{mainpitch.title}</h1>
-            <p className="home__pitchDescription">{mainpitch.description}</p>
-          </div>
-        </div>
+        </h2>
+        <h2 className="home__pitchTitle">{mainpitch.title}</h2>
+        <p className="home__pitchDescription">{mainpitch.description}</p>
       </div>
     </section>
-    <section className="home__blurb">
-      <div className="flexContainer flexContainer--homeblurb">
+
+    <section className="home__container home__gridContainer">
+      <div className="home__gridItem--10out12">
         <Features gridItems={intro.blurbs} />
       </div>
     </section>
 
-    <section className="home__update">
-      <div className="flexContainer flexContainer--homeUpdate">
+    <section className="home__container home__gridContainer home__update">
+      <div className="home__gridItem--6out12">
         <div
           dangerouslySetInnerHTML={{
             __html: content
@@ -87,16 +61,14 @@ export const HomePageTemplate = ({
       </div>
     </section>
 
-    <section className="home__model">
-      <div className="flexContainer flexContainer--homeUpdate">
-        <h3>{model.heading}</h3>
-        <Features gridItems={model.blurbs} />
-      </div>
+    <section className="home__container home__model">
+      <h2>{model.heading}</h2>
+      <Features gridItems={model.blurbs} />
     </section>
 
-    <section className="home__team">
-      <div className="flexContainer flexContainer--hometeam">
-        <h3>{team.heading}</h3>
+    <section className="home__container home__team">
+      <h2>{team.heading}</h2>
+      <div className="GridContainer">
         <div className="home__teamWrapper">
           <div className="home__teamHeadshot">
             <PreviewCompatibleImage imageInfo={team} />
