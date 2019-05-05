@@ -18,9 +18,12 @@ h1 {
 
 h2 {
   font-size: $font-size-2;
-  line-height: 35px;
-  font-weight: $weight-medium;
+  font-weight: 600;
   margin-top: 2em;
+
+  &:first-child {
+    margin-top: 1em;
+  }
 }
 
 h3 {
@@ -30,28 +33,45 @@ h3 {
 
 h4 {
   font-size: $font-size-4;
-  color: $primary-font-color;
+  font-weight: $weight-bold;
+  margin: auto;
+  color: $green;
 }
 
 p {
   margin-bottom: 1em;
+  &:last-child {
+    margin-bottom: 2em;
+  }
 }
 
 blockquote {
   color: $secondary-font-color;
-  background-color: rgba(255, 229, 100, 0.3);
+  // background-color: rgba(255, 229, 100, 0.3);
   padding: 15px 30px 15px 15px;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
   margin-bottom: 1em;
-  border-left: 8px solid #ffe564;
+  border: 1px solid $blue;
+  border-radius: 5px;
+  // border-left: 8px solid #ffe564;
 
   p {
-    margin-bottom: 0;
+    margin-bottom: 1em;
   }
 }
 
 ul {
   // margin-bottom: 1em;
+}
+
+li {
+  line-height: 2em;
+  code {
+    display: inline;
+    background-color: $purple !important;
+    color: white !important;
+    padding: 4px 7px !important;
+  }
 }

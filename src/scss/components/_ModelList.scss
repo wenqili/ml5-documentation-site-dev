@@ -16,12 +16,13 @@
   }
 
   a:hover {
-    color: $blue;
+    color: $purple;
   }
 }
 
 .ModelList__link {
   &--active {
     color: $purple !important;
+    font-weight: $weight-medium;
   }
 }

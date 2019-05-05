@@ -7,7 +7,6 @@ import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 import ModelList from "../components/ModelList";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import "react-tabs/style/react-tabs.css";
 import MarkdownContent from "../components/MarkdownContent";
 import Highlight from "react-highlight.js";
 export const ModelPageTemplate = ({
@@ -44,14 +43,14 @@ export const ModelPageTemplate = ({
             <MarkdownContent content={description} />
             <Tabs>
               <TabList>
-                <Tab>Documentation</Tab>
-                <Tab>Examples</Tab>
-                <Tab>Tutorial</Tab>
-                <Tab>Advanced</Tab>
+                <Tab>documentation</Tab>
+                <Tab>examples</Tab>
+                <Tab>tutorial</Tab>
+                <Tab>advanced</Tab>
               </TabList>
 
               <TabPanel>
-                <h2>Documentation</h2>
+                {/* <h2>Documentation</h2> */}
                 <PostContent content={content} />
               </TabPanel>
 
@@ -66,18 +65,22 @@ export const ModelPageTemplate = ({
                     }}
                   />
                 </pre> */}
-                {examples.map(example => (
-                  <div>
-                    <div
-                      dangerouslySetInnerHTML={{
-                        __html: example.demo
-                      }}
-                    />
-                    <MarkdownContent content={example.demo} />
-                    <script>console.log("XXX")</script>
-                    <Highlight language="javascript">{example.code}</Highlight>
-                  </div>
-                ))}
+                {examples
+                  ? examples.map(example => (
+                      <div key="">
+                        <div
+                          dangerouslySetInnerHTML={{
+                            __html: example.demo
+                          }}
+                        />
+                        <MarkdownContent content={example.demo} />
+                        <script>console.log("XXX")</script>
+                        <Highlight language="javascript">
+                          {example.code}
+                        </Highlight>
+                      </div>
+                    ))
+                  : null}
               </TabPanel>
 
               <TabPanel>

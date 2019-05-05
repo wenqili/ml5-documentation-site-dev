@@ -68,30 +68,14 @@ examples:
       });
 ---
 
-<div class="example">
-  <img src="/assets/img/bird.jpg" id="targetImage" width=400/>
-  <p id="status">Loading Model...</p>
-  <p>The MobileNet model labeled this as <span id="result">...</span>, with a confidence of <span id="probability">...</span>.</p>
-</div>
+## test
 
-## Example
-
-```
-// Create the character level generator with a pre trained model
-const rnn = ml5.charRNN("models/bolaño/", modelLoaded);
-
-// When the model is loaded
-function modelLoaded() {
-  console.log("Model Loaded!");
-}
-
-// Generete content
-rnn.generate({ seed: "the meaning of pizza is" }, function(err, results) {
-  console.log(results);
-});
-```
-
-[Here](https://github.com/ml5js/ml5-examples/blob/master/p5js/LSTM/LSTM_Text/sketch.js) is a complete example using the [p5.js](https://p5js.org) library.
+> #### ml5.charRNN(model, ?callback)
+>
+> Generates content a stateless manner, based on some initial text (known as a "seed"). Returns a string.
+>
+> - `model` — The pre-trained charRNN model.
+> - `callback` — Optional. A callback to be called once the model has loaded. If no callback is provided, it will return a promise that will be resolved once the model has loaded.
 
 ## Syntax
 
