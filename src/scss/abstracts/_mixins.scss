@@ -35,3 +35,9 @@
     @content;
   }
 }
+
+@mixin referenceBreakpoint() {
+  @media screen and (max-width: 961px) {
+    @content;
+  }
+}
