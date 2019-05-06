@@ -50,6 +50,7 @@ h5 {
   margin: auto;
   margin-bottom: 0.5em;
   color: #6db51e;
+  line-height: 2em;
 }
 
 p {
@@ -88,6 +89,10 @@ blockquote {
 
   .gatsby-highlight {
     margin: $gutter;
+  }
+
+  p {
+    line-height: 2em;
   }
 
   p:not(:last-child) {
