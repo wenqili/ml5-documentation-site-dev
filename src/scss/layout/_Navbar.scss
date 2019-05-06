@@ -92,6 +92,15 @@ $Navbar-breakpoint: $tablet !default;
   align-items: center;
   padding: 0.5rem 0.75rem;
   position: relative;
+  transition: color 0.3s;
+  &:hover {
+    color: $purple;
+  }
+
+  &.is-active {
+    color: $purple;
+    font-weight: $weight-bold;
+  }
 
   img {
     max-height: 1.75rem;
