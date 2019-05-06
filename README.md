@@ -6,9 +6,12 @@ This repo contains ml5.js website 2.0 that is built with [Gatsby](https://www.ga
 
 It follows the [JAMstack architecture](https://jamstack.org) by using Git as a single source of truth, and [Netlify](https://www.netlify.com) for continuous deployment, and CDN distribution.
 
+<a href="https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/gatsby-starter-netlify-cms&amp;stack=cms"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a>
+
 ## Documentation
 
 **Site files**
+
 - [src/pages](): routes for pages with URLs, mostly Markdown files and index pages
 - [src/templates](): templates for different pages
 - [src/components](): react components
@@ -16,6 +19,7 @@ It follows the [JAMstack architecture](https://jamstack.org) by using Git as a s
 - [static/img](): images that used in page content
 
 **Style files**
+
 - [scss/abstract]()
 - [scss/base]()
 - [scss/components]()
@@ -30,24 +34,27 @@ It follows the [JAMstack architecture](https://jamstack.org) by using Git as a s
 - [Gatsby CLI](https://www.gatsbyjs.org/docs/)
 
 ### Access Locally
+
 ```
 $ git clone https://github.com/[GITHUB_USERNAME]/[REPO_NAME].git
 $ cd [REPO_NAME]
 $ yarn
 $ npm run start
 ```
+
 To test the CMS locally, you'll need run a production build of the site:
+
 ```
 $ npm run build
 $ npm run serve
 ```
 
 ### Setting up the CMS
+
 Follow the [Netlify CMS Quick Start Guide](https://www.netlifycms.org/docs/quick-start/#authentication) to set up authentication, and hosting.
 
-
-
 ### Machine Learning Model Template
+
 - Title
 - Description
 - Tag
