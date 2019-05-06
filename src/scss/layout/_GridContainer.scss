@@ -8,6 +8,10 @@
   grid-gap: $gutter;
   grid-auto-flow: column;
 
+  @include mobile-only() {
+    grid-auto-flow: row;
+  }
+
   &--vertical {
     grid-auto-flow: row;
   }

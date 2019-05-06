@@ -35,14 +35,27 @@ const Navbar = class extends React.Component {
   render() {
     return (
       <nav className="Navbar" role="navigation" aria-label="main-navigation">
-        <div className="Navbar__wrapper">
+        <div className={`Navbar__wrapper ${this.state.navBarActiveClass}`}>
           <div className="Navbar__brand">
             <Link to="/" className="Navbar__item" title="Logo">
               <img src={logo} alt="ml5.js logo" />
             </Link>
+            <div className={`Navbar__tagline ${this.state.navBarActiveClass}`}>
+              <span className="Navbar__item">
+                <span role="img" aria-label="star">
+                  🌟
+                </span>
+                <span>Friendly machine learning for the web!</span>
+                <span role="img" aria-label="star">
+                  🌟
+                </span>
+              </span>
+            </div>
             {/* Hamburger menu */}
             <div
-              className={`navbar-burger burger ${this.state.navBarActiveClass}`}
+              className={`Burger navbar-burger burger ${
+                this.state.navBarActiveClass
+              }`}
               data-target="navMenu"
               onClick={() => this.toggleHamburger()}
             >
@@ -51,17 +64,7 @@ const Navbar = class extends React.Component {
               <span />
             </div>
           </div>
-          <div className="Navbar__tagline">
-            <span className="Navbar__item">
-              <span role="img" aria-label="star">
-                🌟
-              </span>
-              Friendly machine learning for the web!
-              <span role="img" aria-label="star">
-                🌟
-              </span>
-            </span>
-          </div>
+
           <div
             id="navMenu"
             className={`Navbar__menu ${this.state.navBarActiveClass}`}

@@ -51,7 +51,7 @@ export const HomePageTemplate = ({
       </div>
     </section>
 
-    <section className="home__container home__gridContainer home__update">
+    <section className="home__update home__gridContainer">
       <div className="home__gridItem--6out12">
         <div
           dangerouslySetInnerHTML={{
@@ -66,7 +66,7 @@ export const HomePageTemplate = ({
       <Features gridItems={model.blurbs} />
     </section>
 
-    <section className="home__container home__team">
+    <section className="home__team">
       <h2>{team.heading}</h2>
       <div className="GridContainer">
         <div className="home__teamWrapper">

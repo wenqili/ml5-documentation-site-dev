@@ -1,19 +1,25 @@
 // Responsiveness
 
 @mixin mobile-only() {
-  @media screen and (max-width: $mobile){
+  @media screen and (max-width: $mobile) {
     @content;
   }
 }
 
 @mixin tablet-up() {
-  @media screen and (min-width: $tablet){
+  @media screen and (min-width: $tablet) {
     @content;
   }
 }
 
 @mixin tablet-only() {
-  @media screen and (min-width: $tablet) and (max-width: $desktop - 1px){
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+    @content;
+  }
+}
+
+@mixin desktop-up() {
+  @media screen and (min-width: $desktop) {
     @content;
   }
 }
@@ -29,5 +35,3 @@
     @content;
   }
 }
-
-

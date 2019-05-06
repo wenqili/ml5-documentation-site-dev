@@ -1,6 +1,13 @@
 .home__container {
   padding: 0 $gutter;
+
+  //fullhd screen design
   width: 100vw;
+
+  @include fullhd() {
+    max-width: 1440px;
+    margin: auto;
+  }
 }
 
 .home__featuredTitle {
@@ -33,16 +40,31 @@
 
 .home__gridContainer {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
   grid-gap: 12px;
+
+  @include tablet-up() {
+    grid-template-columns: repeat(12, 1fr);
+  }
 }
 
 .home__gridItem {
   // grid-column: 2;
   // grid-row: 1;
   &--6out12 {
-    grid-column-start: 4;
-    grid-column-end: 10;
+    @include tablet-only() {
+      grid-column-start: 2;
+      grid-column-end: 12;
+    }
+
+    @include desktop-up() {
+      grid-column-start: 3;
+      grid-column-end: 11;
+    }
+
+    @include fullhd() {
+      grid-column-start: 4;
+      grid-column-end: 10;
+    }
   }
 
   &--10out12 {

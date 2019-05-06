@@ -5,10 +5,10 @@
 @import "./base/base", "./base/font", "./base/typography", "./base/prettify";
 
 @import "./layout/Navbar", "./layout/Sidebar", "./layout/wrapper",
-  "./layout/flexContainer", "./layout/Section", "./layout/Footer",
+  "./layout/GridContainer", "./layout/Section", "./layout/Footer",
   "./layout/Container", "./layout/ml5Grid";
 
 @import "./components/ModelList", "./components/TagList", "./components/Post",
-  "./components/Button", "./components/Tab";
+  "./components/Button", "./components/Tab", "./components/Burger";
 
 @import "./pages/home", "./pages/reference", "./pages/community";
