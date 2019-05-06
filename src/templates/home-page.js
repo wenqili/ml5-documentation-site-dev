@@ -54,6 +54,7 @@ export const HomePageTemplate = ({
     <section className="home__update home__gridContainer">
       <div className="home__gridItem--6out12">
         <div
+          className="home__updateContent"
           dangerouslySetInnerHTML={{
             __html: content
           }}

@@ -130,11 +130,16 @@
     color: white;
     font-size: $font-size-3;
   }
+
+  .home__gridItem--6out12 {
+    overflow-x: auto;
+  }
 }
 
 .home__team {
   background-color: $purple;
   padding: calc(#{$gutter} * 2) $gutter;
+  width: 100vw;
 
   h2 {
     color: whitesmoke;

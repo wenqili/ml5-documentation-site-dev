@@ -1,5 +1,6 @@
 .ml5Grid__wrapper {
   padding: $gutter;
+  width: 100%;
 }
 
 .ml5Grid__container {
@@ -19,17 +20,25 @@
 }
 
 .ml5Grid__content {
-  grid-column: 2;
-  grid-row: 1;
   padding: $gutter;
   max-width: 960px;
   width: 100%;
   margin: auto;
   margin-top: 0;
 
+  @include tablet-up() {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
   &--footerlinks {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: $gutter;
+
+    @include mobile-only() {
+      text-align: center;
+    }
   }
 }
 
@@ -54,7 +63,15 @@
   display: grid;
   grid-gap: 24px;
   width: 100%;
-  grid-template-columns: 200px 1fr;
+
+  @include mobile-only() {
+    // grid-template-rows: 1fr 1fr;
+    grid-auto-flow: row;
+  }
+
+  @include tablet-up() {
+    grid-template-columns: 200px 1fr;
+  }
 }
 
 .ml5Grid__itplogo {
