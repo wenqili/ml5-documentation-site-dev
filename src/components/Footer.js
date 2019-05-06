@@ -53,7 +53,7 @@ const Footer = class extends React.Component {
                     </span>
                   </li>
                   <li>
-                    <Link className="Footer__item" to="/experiments">
+                    <Link className="Footer__item" to="/community">
                       Experiments
                     </Link>
                   </li>
@@ -82,9 +82,14 @@ const Footer = class extends React.Component {
                     </span>
                   </li>
                   <li>
-                    <Link className="Footer__item" to="/experiments">
+                    <a
+                      className="Footer__item"
+                      href="https://github.com/ml5js/ml5-library"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       Github
-                    </Link>
+                    </a>
                   </li>
                 </ul>
               </section>

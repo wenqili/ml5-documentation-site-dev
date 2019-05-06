@@ -9,6 +9,9 @@ export default class BlogIndexPage extends React.Component {
       <Layout>
         <section className="ml5Grid__wrapper">
           <div className="ml5Grid__container ml5Grid__container--communityPage">
+            <section className="ml5Grid__sidebar">
+              <div className="Sidebar__container" />
+            </section>
             <div className="ml5Grid__content">
               <h1>Community</h1>
               <BlogRoll />

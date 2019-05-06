@@ -3,17 +3,20 @@
 }
 
 .Post__wrapper {
-  display: flex;
+  display: grid;
+  grid-gap: $gutter;
+  grid-template-columns: minmax(600px, 1fr) minmax(200px, 1fr);
+
+  @include referenceBreakpoint() {
+    grid-template-columns: auto;
+  }
 }
 
 .Post__thumbnail {
-  width: 600px;
+  // width: 600px;
 }
 
 .Post__meta {
-  width: 40%;
-  padding-left: 30px;
-  padding-right: 30px;
 }
 
 .Post__title {

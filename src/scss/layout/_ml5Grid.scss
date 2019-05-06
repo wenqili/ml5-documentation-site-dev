@@ -21,6 +21,9 @@
 
   &--communityPage {
     grid-template-columns: auto 1fr auto;
+    @include referenceBreakpoint() {
+      grid-template-columns: auto;
+    }
   }
 }
 
@@ -48,10 +51,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: $gutter;
-
-    @include mobile-only() {
-      text-align: center;
-    }
+    text-align: center;
   }
 }
 
@@ -82,6 +82,10 @@
   display: grid;
   grid-gap: 24px;
   width: 100%;
+
+  @include referenceBreakpoint() {
+    grid-template-columns: auto !important;
+  }
 
   @include mobile-only() {
     // grid-template-rows: 1fr 1fr;
